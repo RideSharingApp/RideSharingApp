@@ -9,16 +9,17 @@
 
 The following **required** functionality is completed:
 
-- [ ] Login/Signup [phone number]
-- [ ] two tabs: drivers, riders (closest cities)
-- [ ] settings
-- [ ] 
+- [ ] Login/Signup [phone number verification]
+- [ ] Two tabs: drivers, riders (closest cities)
+- [ ] Settings
+- [ ] Integrate Parse 
+- [ ] Facebook login 
+- [ ] Upload rides to Parse 
+- 
 The following **optional** features are implemented:
 
 - [ ] messages
 - [ ] payment
-- [ ] 
-- [ ] 
 
 The following **additional** features are implemented:
 
