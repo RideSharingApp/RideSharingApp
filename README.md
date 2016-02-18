@@ -15,7 +15,7 @@ The following **required** functionality is completed:
 - [ ] Integrate Parse 
 - [ ] Facebook login 
 - [ ] Upload rides to Parse 
-- 
+- [ ]
 The following **optional** features are implemented:
 
 - [ ] messages
