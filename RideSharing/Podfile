@@ -8,5 +8,6 @@ target 'RideSharing' do
     pod "DGElasticPullToRefresh"
     pod 'DGActivityIndicatorView'
     pod "ElasticTransition"
+    pod 'SlideMenuControllerSwift'
 end
 
