@@ -31,7 +31,7 @@ The following **additional** features are implemented:
 5. firstName(String);
 6. lastName(String);
 7. profilePicture(File);
-8. reviews(Array);
+8. reviews(Array) - will contain many Review class objects;
 9. rating - average of all review ratings(Number);
 10. email(String) - optional;
 
