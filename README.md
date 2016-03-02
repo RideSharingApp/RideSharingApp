@@ -43,14 +43,12 @@ The following **additional** features are implemented:
 5. seatsAvailable(String);
 5. driver(Pointer<_User>);
 6. description(String);
-6. availability(Boolean);
+7. availability(Boolean);
 
 - [ ] Review class:
 1. reviewer(Pointer<_User>);
 2. rating(Number) --> should think about types, it is may be better to store everything as a String;
 3. comment(String);
-
-
 
 ## Video Walkthrough 
 
