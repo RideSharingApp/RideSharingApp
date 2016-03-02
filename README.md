@@ -1,4 +1,4 @@
-# Ridesharing-App
+# Casper - is a cheap and most convinient way to reach a destination!
 
 *Casper*
 
