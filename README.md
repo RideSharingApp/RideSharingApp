@@ -1,14 +1,12 @@
 # Ridesharing-App
 
-*Ride Sharing App*
+*Casper*
 
-**Ride Sharing App** is a ride sharing app
-
+**Casper** is an awesome ride sharing app!
 
 ## User Stories
 
 The following **required** functionality is completed:
-
 - [ ] Login/Signup [phone number verification]
 - [ ] Two tabs: drivers, riders (closest cities)
 - [ ] Settings
@@ -16,15 +14,42 @@ The following **required** functionality is completed:
 - [ ] Facebook login 
 - [ ] Upload rides to Parse 
 - [ ] SlideOut Menu Controller
-- [ ]
-The following **optional** features are implemented:
 
+The following **optional** features are implemented:
 - [ ] messages
 - [ ] payment
 
 The following **additional** features are implemented:
-
 - [ ] List anything else that you can get done to improve the app functionality!
+
+**Parse** implementation will require following classes and their attributes:
+- [ ] User class:
+1. username(String);
+2. password(String);
+3. phoneNumber(String);
+4. phoneNumberVerified(Boolean);
+5. firstName(String);
+6. lastName(String);
+7. profilePicture(File);
+8. reviews(Array);
+9. rating - average of all review ratings(Number);
+10. email(String) - optional;
+
+- [ ] Ride class:
+1. departurePoint(String);
+2. arrivalPoint(String);
+3. dateAndTime(Date);
+4. price(String);
+5. seatsAvailable(String);
+5. driver(Pointer<_User>);
+6. description(String);
+6. availability(Boolean);
+
+- [ ] Review class:
+1. reviewer(Pointer<_User>);
+2. rating(Number) --> should think about types, it is may be better to store everything as a String;
+3. comment(String);
+
 
 
 ## Video Walkthrough 
