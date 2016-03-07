@@ -13,6 +13,8 @@
 		716FA7131C863AA400ACF307 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716FA7111C863AA400ACF307 /* Main.storyboard */; };
 		716FA7151C863AA400ACF307 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 716FA7141C863AA400ACF307 /* Assets.xcassets */; };
 		716FA7181C863AA400ACF307 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716FA7161C863AA400ACF307 /* LaunchScreen.storyboard */; };
+		71A2E63F1C8E1FB70093FA08 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A2E63E1C8E1FB70093FA08 /* SWRevealViewController.m */; };
+		71A2E6411C8E26A50093FA08 /* RideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2E6401C8E26A50093FA08 /* RideViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,10 @@
 		716FA7141C863AA400ACF307 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		716FA7171C863AA400ACF307 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		716FA7191C863AA400ACF307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71A2E63C1C8E1FB60093FA08 /* RideSharing-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RideSharing-Bridging-Header.h"; sourceTree = "<group>"; };
+		71A2E63D1C8E1FB70093FA08 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		71A2E63E1C8E1FB70093FA08 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		71A2E6401C8E26A50093FA08 /* RideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideViewController.swift; sourceTree = "<group>"; };
 		803140ED5EB20B5D0D631D2A /* Pods-RideSharing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RideSharing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RideSharing/Pods-RideSharing.debug.xcconfig"; sourceTree = "<group>"; };
 		C82A6281E5E1D8D73629179B /* Pods_RideSharing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RideSharing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7CC3CDF048FB580167E957 /* Pods-RideSharing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RideSharing.release.xcconfig"; path = "Pods/Target Support Files/Pods-RideSharing/Pods-RideSharing.release.xcconfig"; sourceTree = "<group>"; };
@@ -69,14 +75,26 @@
 		716FA70C1C863AA400ACF307 /* RideSharing */ = {
 			isa = PBXGroup;
 			children = (
+				71A2E6421C8E26CB0093FA08 /* Libraries */,
 				716FA70D1C863AA400ACF307 /* AppDelegate.swift */,
 				716FA70F1C863AA400ACF307 /* ViewController.swift */,
+				71A2E6401C8E26A50093FA08 /* RideViewController.swift */,
 				716FA7111C863AA400ACF307 /* Main.storyboard */,
 				716FA7141C863AA400ACF307 /* Assets.xcassets */,
 				716FA7161C863AA400ACF307 /* LaunchScreen.storyboard */,
 				716FA7191C863AA400ACF307 /* Info.plist */,
 			);
 			path = RideSharing;
+			sourceTree = "<group>";
+		};
+		71A2E6421C8E26CB0093FA08 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				71A2E63D1C8E1FB70093FA08 /* SWRevealViewController.h */,
+				71A2E63E1C8E1FB70093FA08 /* SWRevealViewController.m */,
+				71A2E63C1C8E1FB60093FA08 /* RideSharing-Bridging-Header.h */,
+			);
+			name = Libraries;
 			sourceTree = "<group>";
 		};
 		8899D0F946A755382C74886A /* Pods */ = {
@@ -212,6 +230,8 @@
 			files = (
 				716FA7101C863AA400ACF307 /* ViewController.swift in Sources */,
 				716FA70E1C863AA400ACF307 /* AppDelegate.swift in Sources */,
+				71A2E6411C8E26A50093FA08 /* RideViewController.swift in Sources */,
+				71A2E63F1C8E1FB70093FA08 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,10 +345,13 @@
 			baseConfigurationReference = 803140ED5EB20B5D0D631D2A /* Pods-RideSharing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RideSharing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = THacked96.RideSharing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RideSharing/RideSharing-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -337,10 +360,12 @@
 			baseConfigurationReference = DE7CC3CDF048FB580167E957 /* Pods-RideSharing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RideSharing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = THacked96.RideSharing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RideSharing/RideSharing-Bridging-Header.h";
 			};
 			name = Release;
 		};
