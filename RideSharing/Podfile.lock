@@ -7,14 +7,12 @@ PODS:
   - MotionAnimation (0.0.5)
   - Parse (1.12.0):
     - Bolts/Tasks (~> 1.5)
-  - SlideMenuControllerSwift (2.0.5)
 
 DEPENDENCIES:
   - DGActivityIndicatorView
   - DGElasticPullToRefresh
   - ElasticTransition
   - Parse
-  - SlideMenuControllerSwift
 
 SPEC CHECKSUMS:
   Bolts: f52a250053bb517ca874523c3913776359ab3def
@@ -23,6 +21,5 @@ SPEC CHECKSUMS:
   ElasticTransition: 7c04b2ad4323fc4b18475c60f061cf4be7399f00
   MotionAnimation: d9d4060bf4f494dd61bf868b8969a31b1b0b6f2a
   Parse: de2c52a9a1421b91ae7594ab8ce191afd184f19b
-  SlideMenuControllerSwift: 9dcae36265e14c4f42e729f212463beb60d2cf96
 
 COCOAPODS: 0.39.0
