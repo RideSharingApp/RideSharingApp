@@ -12,6 +12,7 @@ The following **required** functionality is completed:
 - [ ] Settings
 - [ ] Integrate Parse 
 - [ ] Facebook login 
+- [ ] Custom search for finding rides
 - [ ] Upload rides to Parse 
 - [x] SlideOut Menu Controller
 
