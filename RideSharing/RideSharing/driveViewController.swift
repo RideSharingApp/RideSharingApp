@@ -10,7 +10,6 @@ import UIKit
 
 class driveViewController: UIViewController {
     
-    
     @IBOutlet weak var menuButton: UIBarButtonItem!
 
     override func viewDidLoad() {

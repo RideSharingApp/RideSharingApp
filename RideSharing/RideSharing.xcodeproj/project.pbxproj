@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4DC4AE8A1D5E49EA2C853C5C /* Pods_RideSharing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C82A6281E5E1D8D73629179B /* Pods_RideSharing.framework */; };
+		711B3CED1C8F7E6200F9A1BA /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711B3CEB1C8F7E6200F9A1BA /* CustomSearchBar.swift */; };
+		711B3CEE1C8F7E6200F9A1BA /* CustomSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711B3CEC1C8F7E6200F9A1BA /* CustomSearchController.swift */; };
 		716FA70E1C863AA400ACF307 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716FA70D1C863AA400ACF307 /* AppDelegate.swift */; };
 		716FA7101C863AA400ACF307 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716FA70F1C863AA400ACF307 /* ViewController.swift */; };
 		716FA7131C863AA400ACF307 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716FA7111C863AA400ACF307 /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		711B3CEB1C8F7E6200F9A1BA /* CustomSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
+		711B3CEC1C8F7E6200F9A1BA /* CustomSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchController.swift; sourceTree = "<group>"; };
 		716FA70A1C863AA400ACF307 /* RideSharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RideSharing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		716FA70D1C863AA400ACF307 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		716FA70F1C863AA400ACF307 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 		71A2E6421C8E26CB0093FA08 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				711B3CEB1C8F7E6200F9A1BA /* CustomSearchBar.swift */,
+				711B3CEC1C8F7E6200F9A1BA /* CustomSearchController.swift */,
 				71A2E6451C8E30320093FA08 /* AvatarImageView.swift */,
 				71A2E63D1C8E1FB70093FA08 /* SWRevealViewController.h */,
 				71A2E63E1C8E1FB70093FA08 /* SWRevealViewController.m */,
@@ -240,11 +246,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				711B3CEE1C8F7E6200F9A1BA /* CustomSearchController.swift in Sources */,
 				716FA7101C863AA400ACF307 /* ViewController.swift in Sources */,
 				71A2E6481C8E33590093FA08 /* driveViewController.swift in Sources */,
 				71A2E6441C8E2A0A0093FA08 /* RideTableViewCell.swift in Sources */,
 				716FA70E1C863AA400ACF307 /* AppDelegate.swift in Sources */,
 				71A2E6461C8E30320093FA08 /* AvatarImageView.swift in Sources */,
+				711B3CED1C8F7E6200F9A1BA /* CustomSearchBar.swift in Sources */,
 				71A2E6411C8E26A50093FA08 /* RideViewController.swift in Sources */,
 				71A2E64A1C8E38590093FA08 /* ProfileViewController.swift in Sources */,
 				71A2E63F1C8E1FB70093FA08 /* SWRevealViewController.m in Sources */,

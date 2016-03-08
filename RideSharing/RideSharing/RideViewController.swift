@@ -12,13 +12,17 @@ import DGElasticPullToRefresh
 import DGActivityIndicatorView
 import ElasticTransition
 
-class RideViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class RideViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,  CustomSearchControllerDelegate  {
     
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     
     @IBOutlet weak var tableView: UITableView!
+    
+    var shouldShowSearchResults = false
+    
+    var customSearchController: CustomSearchController!
     
     let activityIndicatorView = DGActivityIndicatorView(type: DGActivityIndicatorAnimationType.RotatingSquares, tintColor: UIColor(red: 78/255.0, green: 221/255.0, blue: 200/255.0, alpha: 1.0), size: 70.0)
 
@@ -30,6 +34,8 @@ class RideViewController: UIViewController, UITableViewDelegate, UITableViewData
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
+        configureCustomSearchController()
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -71,6 +77,15 @@ class RideViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Dispose of any resources that can be recreated.
     }
     
+    func configureCustomSearchController() {
+        customSearchController = CustomSearchController(searchResultsController: self, searchBarFrame: CGRectMake(0.0, 0.0, tableView.frame.size.width, 50.0), searchBarFont: UIFont(name: "Futura", size: 16.0)!, searchBarTextColor: UIColor.orangeColor(), searchBarTintColor: UIColor.blackColor())
+        
+        customSearchController.customSearchBar.placeholder = "Custom Search..."
+        tableView.tableHeaderView = customSearchController.customSearchBar
+        
+        customSearchController.customDelegate = self
+    }
+    
 
     /*
     // MARK: - Navigation
@@ -84,6 +99,51 @@ class RideViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     deinit {
         tableView.dg_removePullToRefresh()
+    }
+    
+    // MARK: UISearchResultsUpdating delegate function
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        guard let searchString = searchController.searchBar.text else {
+            return
+        }
+        
+        // Note: Filter the data array and get only those that match the search text.
+        
+        
+        // Reload the tableview.
+        tableView.reloadData()
+    }
+    
+    
+    // MARK: CustomSearchControllerDelegate functions
+    
+    func didStartSearching() {
+        shouldShowSearchResults = true
+        tableView.reloadData()
+    }
+    
+    
+    func didTapOnSearchButton() {
+        if !shouldShowSearchResults {
+            shouldShowSearchResults = true
+            tableView.reloadData()
+        }
+    }
+    
+    
+    func didTapOnCancelButton() {
+        shouldShowSearchResults = false
+        tableView.reloadData()
+    }
+    
+    
+    func didChangeSearchText(searchText: String) {
+        // Filter the data array and get only those that match the search text.
+        // Note: Add code to filter
+        
+        // Reload the tableview.
+        tableView.reloadData()
     }
 
 }
