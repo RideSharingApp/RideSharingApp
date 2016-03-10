@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4DC4AE8A1D5E49EA2C853C5C /* Pods_RideSharing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C82A6281E5E1D8D73629179B /* Pods_RideSharing.framework */; };
-		69F0F1A51C921E4B005A0411 /*  CustomSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F0F1A41C921E4B005A0411 /*  CustomSearchController.swift */; };
+		69F0F1A51C921E4B005A0411 /* CustomSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F0F1A41C921E4B005A0411 /* CustomSearchController.swift */; };
 		69F0F1A71C921E7B005A0411 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F0F1A61C921E7B005A0411 /* CustomSearchBar.swift */; };
 		716FA70E1C863AA400ACF307 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716FA70D1C863AA400ACF307 /* AppDelegate.swift */; };
 		716FA7101C863AA400ACF307 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716FA70F1C863AA400ACF307 /* ViewController.swift */; };
@@ -28,7 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		69F0F1A41C921E4B005A0411 /*  CustomSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = " CustomSearchController.swift"; sourceTree = "<group>"; };
+		69F0F1A41C921E4B005A0411 /* CustomSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchController.swift; sourceTree = "<group>"; };
 		69F0F1A61C921E7B005A0411 /* CustomSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
 		716FA70A1C863AA400ACF307 /* RideSharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RideSharing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		716FA70D1C863AA400ACF307 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,8 +107,6 @@
 				716FA7141C863AA400ACF307 /* Assets.xcassets */,
 				716FA7161C863AA400ACF307 /* LaunchScreen.storyboard */,
 				716FA7191C863AA400ACF307 /* Info.plist */,
-				69F0F1A41C921E4B005A0411 /*  CustomSearchController.swift */,
-				69F0F1A61C921E7B005A0411 /* CustomSearchBar.swift */,
 			);
 			path = RideSharing;
 			sourceTree = "<group>";
@@ -116,6 +114,8 @@
 		71A2E6421C8E26CB0093FA08 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				69F0F1A41C921E4B005A0411 /* CustomSearchController.swift */,
+				69F0F1A61C921E7B005A0411 /* CustomSearchBar.swift */,
 				71A2E6451C8E30320093FA08 /* AvatarImageView.swift */,
 				71A2E63D1C8E1FB70093FA08 /* SWRevealViewController.h */,
 				71A2E63E1C8E1FB70093FA08 /* SWRevealViewController.m */,
@@ -268,7 +268,7 @@
 			files = (
 				69F0F1A71C921E7B005A0411 /* CustomSearchBar.swift in Sources */,
 				716FA7101C863AA400ACF307 /* ViewController.swift in Sources */,
-				69F0F1A51C921E4B005A0411 /*  CustomSearchController.swift in Sources */,
+				69F0F1A51C921E4B005A0411 /* CustomSearchController.swift in Sources */,
 				71A2E6481C8E33590093FA08 /* driveViewController.swift in Sources */,
 				71A2E6441C8E2A0A0093FA08 /* RideTableViewCell.swift in Sources */,
 				716FA70E1C863AA400ACF307 /* AppDelegate.swift in Sources */,
