@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4DC4AE8A1D5E49EA2C853C5C /* Pods_RideSharing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C82A6281E5E1D8D73629179B /* Pods_RideSharing.framework */; };
+		716FA70E1C863AA400ACF307 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716FA70D1C863AA400ACF307 /* AppDelegate.swift */; };
+		716FA7101C863AA400ACF307 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716FA70F1C863AA400ACF307 /* ViewController.swift */; };
+		716FA7151C863AA400ACF307 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 716FA7141C863AA400ACF307 /* Assets.xcassets */; };
+		716FA7181C863AA400ACF307 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716FA7161C863AA400ACF307 /* LaunchScreen.storyboard */; };
+		71A2E63F1C8E1FB70093FA08 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A2E63E1C8E1FB70093FA08 /* SWRevealViewController.m */; };
+		71A2E6411C8E26A50093FA08 /* RideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2E6401C8E26A50093FA08 /* RideViewController.swift */; };
+		71A2E6441C8E2A0A0093FA08 /* RideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2E6431C8E2A0A0093FA08 /* RideTableViewCell.swift */; };
+		71A2E6461C8E30320093FA08 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2E6451C8E30320093FA08 /* AvatarImageView.swift */; };
+		71A2E6481C8E33590093FA08 /* driveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2E6471C8E33590093FA08 /* driveViewController.swift */; };
+		71A2E64A1C8E38590093FA08 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2E6491C8E38590093FA08 /* ProfileViewController.swift */; };
+		75CA278A1C8F81290029FEF4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CA27891C8F81290029FEF4 /* SignUpViewController.swift */; };
+		75CA278C1C8F81360029FEF4 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CA278B1C8F81360029FEF4 /* SignInViewController.swift */; };
+		75CA278E1C8F814C0029FEF4 /* PhoneNumberVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CA278D1C8F814C0029FEF4 /* PhoneNumberVerificationViewController.swift */; };
+		75CA27901C8F815A0029FEF4 /* CreateAUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CA278F1C8F815A0029FEF4 /* CreateAUserViewController.swift */; };
+		75CA27931C90D0580029FEF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75CA27911C90D0580029FEF4 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		716FA70A1C863AA400ACF307 /* RideSharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RideSharing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		716FA70D1C863AA400ACF307 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		716FA70F1C863AA400ACF307 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		716FA7141C863AA400ACF307 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		716FA7171C863AA400ACF307 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		716FA7191C863AA400ACF307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71A2E63C1C8E1FB60093FA08 /* RideSharing-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RideSharing-Bridging-Header.h"; sourceTree = "<group>"; };
+		71A2E63D1C8E1FB70093FA08 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		71A2E63E1C8E1FB70093FA08 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		71A2E6401C8E26A50093FA08 /* RideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideViewController.swift; sourceTree = "<group>"; };
+		71A2E6431C8E2A0A0093FA08 /* RideTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideTableViewCell.swift; sourceTree = "<group>"; };
+		71A2E6451C8E30320093FA08 /* AvatarImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
+		71A2E6471C8E33590093FA08 /* driveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = driveViewController.swift; sourceTree = "<group>"; };
+		71A2E6491C8E38590093FA08 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		75CA27891C8F81290029FEF4 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		75CA278B1C8F81360029FEF4 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		75CA278D1C8F814C0029FEF4 /* PhoneNumberVerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberVerificationViewController.swift; sourceTree = "<group>"; };
+		75CA278F1C8F815A0029FEF4 /* CreateAUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAUserViewController.swift; sourceTree = "<group>"; };
+		75CA27921C90D0580029FEF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		803140ED5EB20B5D0D631D2A /* Pods-RideSharing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RideSharing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RideSharing/Pods-RideSharing.debug.xcconfig"; sourceTree = "<group>"; };
+		C82A6281E5E1D8D73629179B /* Pods_RideSharing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RideSharing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE7CC3CDF048FB580167E957 /* Pods-RideSharing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RideSharing.release.xcconfig"; path = "Pods/Target Support Files/Pods-RideSharing/Pods-RideSharing.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		716FA7071C863AA400ACF307 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DC4AE8A1D5E49EA2C853C5C /* Pods_RideSharing.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1791A6B1DA7B448F8E0CED5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C82A6281E5E1D8D73629179B /* Pods_RideSharing.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		716FA7011C863AA400ACF307 = {
+			isa = PBXGroup;
+			children = (
+				716FA70C1C863AA400ACF307 /* RideSharing */,
+				716FA70B1C863AA400ACF307 /* Products */,
+				8899D0F946A755382C74886A /* Pods */,
+				1791A6B1DA7B448F8E0CED5D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		716FA70B1C863AA400ACF307 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				716FA70A1C863AA400ACF307 /* RideSharing.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		716FA70C1C863AA400ACF307 /* RideSharing */ = {
+			isa = PBXGroup;
+			children = (
+				75CA27941C90D1320029FEF4 /* SignInSignUp View Controllers */,
+				71A2E6421C8E26CB0093FA08 /* Libraries */,
+				716FA70D1C863AA400ACF307 /* AppDelegate.swift */,
+				716FA70F1C863AA400ACF307 /* ViewController.swift */,
+				71A2E6431C8E2A0A0093FA08 /* RideTableViewCell.swift */,
+				71A2E6401C8E26A50093FA08 /* RideViewController.swift */,
+				71A2E6471C8E33590093FA08 /* driveViewController.swift */,
+				71A2E6491C8E38590093FA08 /* ProfileViewController.swift */,
+				75CA27911C90D0580029FEF4 /* Main.storyboard */,
+				716FA7141C863AA400ACF307 /* Assets.xcassets */,
+				716FA7161C863AA400ACF307 /* LaunchScreen.storyboard */,
+				716FA7191C863AA400ACF307 /* Info.plist */,
+			);
+			path = RideSharing;
+			sourceTree = "<group>";
+		};
+		71A2E6421C8E26CB0093FA08 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				71A2E6451C8E30320093FA08 /* AvatarImageView.swift */,
+				71A2E63D1C8E1FB70093FA08 /* SWRevealViewController.h */,
+				71A2E63E1C8E1FB70093FA08 /* SWRevealViewController.m */,
+				71A2E63C1C8E1FB60093FA08 /* RideSharing-Bridging-Header.h */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		75CA27941C90D1320029FEF4 /* SignInSignUp View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				75CA27891C8F81290029FEF4 /* SignUpViewController.swift */,
+				75CA278B1C8F81360029FEF4 /* SignInViewController.swift */,
+				75CA278D1C8F814C0029FEF4 /* PhoneNumberVerificationViewController.swift */,
+				75CA278F1C8F815A0029FEF4 /* CreateAUserViewController.swift */,
+			);
+			name = "SignInSignUp View Controllers";
+			sourceTree = "<group>";
+		};
+		8899D0F946A755382C74886A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				803140ED5EB20B5D0D631D2A /* Pods-RideSharing.debug.xcconfig */,
+				DE7CC3CDF048FB580167E957 /* Pods-RideSharing.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		716FA7091C863AA400ACF307 /* RideSharing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 716FA71C1C863AA400ACF307 /* Build configuration list for PBXNativeTarget "RideSharing" */;
+			buildPhases = (
+				6A0BEF86E4B63C230FA53682 /* Check Pods Manifest.lock */,
+				716FA7061C863AA400ACF307 /* Sources */,
+				716FA7071C863AA400ACF307 /* Frameworks */,
+				716FA7081C863AA400ACF307 /* Resources */,
+				308FFACE8A334235ED98968E /* Embed Pods Frameworks */,
+				929E69F27D2F0FDA2091EDB4 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RideSharing;
+			productName = RideSharing;
+			productReference = 716FA70A1C863AA400ACF307 /* RideSharing.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		716FA7021C863AA400ACF307 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Tarang khanna";
+				TargetAttributes = {
+					716FA7091C863AA400ACF307 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 716FA7051C863AA400ACF307 /* Build configuration list for PBXProject "RideSharing" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 716FA7011C863AA400ACF307;
+			productRefGroup = 716FA70B1C863AA400ACF307 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				716FA7091C863AA400ACF307 /* RideSharing */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		716FA7081C863AA400ACF307 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75CA27931C90D0580029FEF4 /* Main.storyboard in Resources */,
+				716FA7181C863AA400ACF307 /* LaunchScreen.storyboard in Resources */,
+				716FA7151C863AA400ACF307 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		308FFACE8A334235ED98968E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RideSharing/Pods-RideSharing-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A0BEF86E4B63C230FA53682 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		929E69F27D2F0FDA2091EDB4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RideSharing/Pods-RideSharing-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		716FA7061C863AA400ACF307 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				716FA7101C863AA400ACF307 /* ViewController.swift in Sources */,
+				71A2E6481C8E33590093FA08 /* driveViewController.swift in Sources */,
+				71A2E6441C8E2A0A0093FA08 /* RideTableViewCell.swift in Sources */,
+				716FA70E1C863AA400ACF307 /* AppDelegate.swift in Sources */,
+				71A2E6461C8E30320093FA08 /* AvatarImageView.swift in Sources */,
+				75CA278E1C8F814C0029FEF4 /* PhoneNumberVerificationViewController.swift in Sources */,
+				71A2E6411C8E26A50093FA08 /* RideViewController.swift in Sources */,
+				75CA278A1C8F81290029FEF4 /* SignUpViewController.swift in Sources */,
+				71A2E64A1C8E38590093FA08 /* ProfileViewController.swift in Sources */,
+				75CA27901C8F815A0029FEF4 /* CreateAUserViewController.swift in Sources */,
+				75CA278C1C8F81360029FEF4 /* SignInViewController.swift in Sources */,
+				71A2E63F1C8E1FB70093FA08 /* SWRevealViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		716FA7161C863AA400ACF307 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				716FA7171C863AA400ACF307 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		75CA27911C90D0580029FEF4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75CA27921C90D0580029FEF4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		716FA71A1C863AA400ACF307 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		716FA71B1C863AA400ACF307 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		716FA71D1C863AA400ACF307 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 803140ED5EB20B5D0D631D2A /* Pods-RideSharing.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = RideSharing/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = THacked96.RideSharing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RideSharing/RideSharing-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		716FA71E1C863AA400ACF307 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE7CC3CDF048FB580167E957 /* Pods-RideSharing.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = RideSharing/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = THacked96.RideSharing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RideSharing/RideSharing-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		716FA7051C863AA400ACF307 /* Build configuration list for PBXProject "RideSharing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				716FA71A1C863AA400ACF307 /* Debug */,
+				716FA71B1C863AA400ACF307 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		716FA71C1C863AA400ACF307 /* Build configuration list for PBXNativeTarget "RideSharing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				716FA71D1C863AA400ACF307 /* Debug */,
+				716FA71E1C863AA400ACF307 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 716FA7021C863AA400ACF307 /* Project object */;
+}

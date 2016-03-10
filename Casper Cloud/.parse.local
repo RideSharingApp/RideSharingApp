@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "Casper": {
+      "applicationId": "YQWXVmiPab9wJDobwHQ5mHODcfmnYaEiFMLpazwZ"
+    },
+    "_default": {
+      "link": "Casper"
+    }
+  }
+}
