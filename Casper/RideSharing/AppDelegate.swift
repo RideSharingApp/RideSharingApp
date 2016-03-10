@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {t
         Parse.setApplicationId("YQWXVmiPab9wJDobwHQ5mHODcfmnYaEiFMLpazwZ",
             clientKey: "RIxD7kenZgr78OJZRWmiOLTuX3n3nlKxMmMOzIXs")
         
