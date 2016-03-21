@@ -11,9 +11,10 @@
 		69567DA11C9F7F4A008A6844 /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69567DA01C9F7F4A008A6844 /* Ride.swift */; };
 		69F0F1A51C921E4B005A0411 /* CustomSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F0F1A41C921E4B005A0411 /* CustomSearchController.swift */; };
 		69F0F1A71C921E7B005A0411 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F0F1A61C921E7B005A0411 /* CustomSearchBar.swift */; };
+		69FDE00A1C9F937F0050C5F8 /* LoginVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 69FDE0091C9F93530050C5F8 /* LoginVideo.mp4 */; };
+		69FDE00C1C9F95780050C5F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69FDE00B1C9F95780050C5F8 /* Assets.xcassets */; };
 		716FA70E1C863AA400ACF307 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716FA70D1C863AA400ACF307 /* AppDelegate.swift */; };
 		716FA7101C863AA400ACF307 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716FA70F1C863AA400ACF307 /* ViewController.swift */; };
-		716FA7151C863AA400ACF307 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 716FA7141C863AA400ACF307 /* Assets.xcassets */; };
 		716FA7181C863AA400ACF307 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716FA7161C863AA400ACF307 /* LaunchScreen.storyboard */; };
 		71A2E63F1C8E1FB70093FA08 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A2E63E1C8E1FB70093FA08 /* SWRevealViewController.m */; };
 		71A2E6411C8E26A50093FA08 /* RideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2E6401C8E26A50093FA08 /* RideViewController.swift */; };
@@ -32,10 +33,11 @@
 		69567DA01C9F7F4A008A6844 /* Ride.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
 		69F0F1A41C921E4B005A0411 /* CustomSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchController.swift; sourceTree = "<group>"; };
 		69F0F1A61C921E7B005A0411 /* CustomSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
+		69FDE0091C9F93530050C5F8 /* LoginVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = LoginVideo.mp4; path = ../../../../Downloads/LoginVideo.mp4; sourceTree = "<group>"; };
+		69FDE00B1C9F95780050C5F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		716FA70A1C863AA400ACF307 /* RideSharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RideSharing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		716FA70D1C863AA400ACF307 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		716FA70F1C863AA400ACF307 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		716FA7141C863AA400ACF307 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		716FA7171C863AA400ACF307 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		716FA7191C863AA400ACF307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71A2E63C1C8E1FB60093FA08 /* RideSharing-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RideSharing-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -115,9 +117,10 @@
 				71A2E6471C8E33590093FA08 /* driveViewController.swift */,
 				71A2E6491C8E38590093FA08 /* ProfileViewController.swift */,
 				75CA27911C90D0580029FEF4 /* Main.storyboard */,
-				716FA7141C863AA400ACF307 /* Assets.xcassets */,
 				716FA7161C863AA400ACF307 /* LaunchScreen.storyboard */,
 				716FA7191C863AA400ACF307 /* Info.plist */,
+				69FDE0091C9F93530050C5F8 /* LoginVideo.mp4 */,
+				69FDE00B1C9F95780050C5F8 /* Assets.xcassets */,
 			);
 			path = RideSharing;
 			sourceTree = "<group>";
@@ -216,9 +219,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69FDE00A1C9F937F0050C5F8 /* LoginVideo.mp4 in Resources */,
 				75CA27931C90D0580029FEF4 /* Main.storyboard in Resources */,
+				69FDE00C1C9F95780050C5F8 /* Assets.xcassets in Resources */,
 				716FA7181C863AA400ACF307 /* LaunchScreen.storyboard in Resources */,
-				716FA7151C863AA400ACF307 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

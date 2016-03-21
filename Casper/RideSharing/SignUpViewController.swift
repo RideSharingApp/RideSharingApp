@@ -8,13 +8,42 @@
 
 import UIKit
 import Parse
+import AVFoundation
 
 class SignUpViewController: UIViewController {
 
+    var player: AVPlayer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        let videoURL: NSURL = NSBundle.mainBundle().URLForResource("LoginVideo", withExtension: "mp4")!
+        
+        player = AVPlayer(URL: videoURL)
+        player?.actionAtItemEnd = .None
+        player?.muted = true
+        
+        let playerLayer = AVPlayerLayer(player: player)
+        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        playerLayer.zPosition = -1
+        
+        playerLayer.frame = view.frame
+        
+        view.layer.addSublayer(playerLayer)
+        
+        player?.play()
+        
+        //loop video
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "loopVideo",
+            name: AVPlayerItemDidPlayToEndTimeNotification,
+            object: nil)
+    }
+    
+    func loopVideo() {
+        player?.seekToTime(kCMTimeZero)
+        player?.play()
     }
 
     override func didReceiveMemoryWarning() {

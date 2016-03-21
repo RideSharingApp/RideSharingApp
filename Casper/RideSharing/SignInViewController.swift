@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import AVFoundation
 
 
 class SignInViewController: UIViewController, UITextFieldDelegate {
@@ -20,6 +21,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     var phoneNumber: String?
     var password: String?
     
+    var player : AVPlayer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         phoneNumberTextField.delegate = self
@@ -27,8 +30,36 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
 
         chooseKeyboardType()
         
+        
         // Do any additional setup after loading the view.
+        let videoURL: NSURL = NSBundle.mainBundle().URLForResource("LoginVideo", withExtension: "mp4")!
+        
+        player = AVPlayer(URL: videoURL)
+        player?.actionAtItemEnd = .None
+        player?.muted = true
+        
+        let playerLayer = AVPlayerLayer(player: player)
+        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        playerLayer.zPosition = -1
+        
+        playerLayer.frame = view.frame
+        
+        view.layer.addSublayer(playerLayer)
+        
+        player?.play()
+        
+        //loop video
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "loopVideo",
+            name: AVPlayerItemDidPlayToEndTimeNotification,
+            object: nil)
     }
+    
+    func loopVideo() {
+        player?.seekToTime(kCMTimeZero)
+        player?.play()
+    }
+    
     func chooseKeyboardType(){
         phoneNumberTextField.keyboardType = UIKeyboardType.DecimalPad
         
@@ -37,6 +68,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     func textFieldDidBeginEditing(textField: UITextField) {
         currentTextField = textField
     }
+    
     
     func textFieldDidEndEditing(textField: UITextField) {
         switch textField.tag {

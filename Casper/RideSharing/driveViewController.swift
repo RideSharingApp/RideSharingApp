@@ -54,7 +54,7 @@ class driveViewController: UIViewController {
         let date = formatter.dateFromString(createdString)
         print(date)
         
-        Ride.postRide(fromTxt.text, arrivalPoint: toTxt.text, dateAndTime: dateView.date, price: priceTxt.text, description: desTxt.text, availability: true) { (success: Bool, error: NSError?) -> Void in
+        Ride.postRide(fronTxt.text, arrivalPoint: toTxt.text, dateAndTime: dateView.date, price: priceTxt.text, description: desTxt.text, availability: true) { (success: Bool, error: NSError?) -> Void in
             if (success) {
                 print("success")
             }
