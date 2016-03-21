@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4DC4AE8A1D5E49EA2C853C5C /* Pods_RideSharing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C82A6281E5E1D8D73629179B /* Pods_RideSharing.framework */; };
+		69567DA11C9F7F4A008A6844 /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69567DA01C9F7F4A008A6844 /* Ride.swift */; };
 		69F0F1A51C921E4B005A0411 /* CustomSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F0F1A41C921E4B005A0411 /* CustomSearchController.swift */; };
 		69F0F1A71C921E7B005A0411 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F0F1A61C921E7B005A0411 /* CustomSearchBar.swift */; };
 		716FA70E1C863AA400ACF307 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716FA70D1C863AA400ACF307 /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		69567DA01C9F7F4A008A6844 /* Ride.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
 		69F0F1A41C921E4B005A0411 /* CustomSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchController.swift; sourceTree = "<group>"; };
 		69F0F1A61C921E7B005A0411 /* CustomSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
 		716FA70A1C863AA400ACF307 /* RideSharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RideSharing.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +76,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		69567D9F1C9F7F34008A6844 /* Ride */ = {
+			isa = PBXGroup;
+			children = (
+				69567DA01C9F7F4A008A6844 /* Ride.swift */,
+			);
+			name = Ride;
+			sourceTree = "<group>";
+		};
 		716FA7011C863AA400ACF307 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +105,7 @@
 		716FA70C1C863AA400ACF307 /* RideSharing */ = {
 			isa = PBXGroup;
 			children = (
+				69567D9F1C9F7F34008A6844 /* Ride */,
 				75CA27941C90D1320029FEF4 /* SignInSignUp View Controllers */,
 				71A2E6421C8E26CB0093FA08 /* Libraries */,
 				716FA70D1C863AA400ACF307 /* AppDelegate.swift */,
@@ -274,6 +285,7 @@
 				716FA70E1C863AA400ACF307 /* AppDelegate.swift in Sources */,
 				71A2E6461C8E30320093FA08 /* AvatarImageView.swift in Sources */,
 				75CA278E1C8F814C0029FEF4 /* PhoneNumberVerificationViewController.swift in Sources */,
+				69567DA11C9F7F4A008A6844 /* Ride.swift in Sources */,
 				71A2E6411C8E26A50093FA08 /* RideViewController.swift in Sources */,
 				75CA278A1C8F81290029FEF4 /* SignUpViewController.swift in Sources */,
 				71A2E64A1C8E38590093FA08 /* ProfileViewController.swift in Sources */,
