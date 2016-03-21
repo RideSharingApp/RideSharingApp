@@ -7,13 +7,14 @@
 ## User Stories
 
 The following **required** functionality is completed:
-- [ ] Login/Signup [phone number verification]
+- [x] Login/Signup [phone number verification]
 - [ ] Two tabs: drivers, riders (closest cities)
 - [ ] Settings
 - [ ] Integrate Parse 
 - [ ] Facebook login 
 - [ ] Upload rides to Parse 
-- [ ] SlideOut Menu Controller
+- [ ] Custom Search bar
+- [x] SlideOut Menu Controller
 
 The following **optional** features are implemented:
 - [ ] messages
