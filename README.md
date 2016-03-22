@@ -7,14 +7,16 @@
 ## User Stories
 
 The following **required** functionality is completed:
-- [x] Login/Signup [phone number verification]
-- [ ] Two tabs: drivers, riders (closest cities)
-- [ ] Settings
-- [ ] Integrate Parse 
-- [ ] Facebook login 
-- [ ] Upload rides to Parse 
-- [ ] Custom Search bar
-- [x] SlideOut Menu Controller
+- [x] Login/Signup functionality [phone number verification] [Karly]
+- [ ] Find drives [Jiayi]
+- [ ] Settings [Tarang]
+- [ ] lougout
+- [x] Integrate Parse [Karly]
+- [ ] Facebook login [Karly]
+- [x] Upload rides to Parse [Akshat]
+- [x] Login/Signup UI [Akshat] 
+- [ ] Custom Search bar [Tarang]
+- [x] SlideOut Menu Controller [Tarang]
 
 The following **optional** features are implemented:
 - [ ] messages
