@@ -10,9 +10,10 @@ The following **required** functionality is completed:
 - [x] Login/Signup functionality [phone number verification] [Karly]
 - [ ] Find drives [Jiayi]
 - [ ] Settings [Tarang]
-- [ ] lougout
+- [ ] lougout [Tarang]
 - [x] Integrate Parse [Karly]
 - [ ] Facebook login [Karly]
+- [ ] Detailed ride view controller [Akshat]
 - [x] Upload rides to Parse [Akshat]
 - [x] Login/Signup UI [Akshat] 
 - [ ] Custom Search bar [Tarang]
@@ -21,6 +22,7 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 - [ ] messages
 - [ ] payment
+- [ ] load cell after posting in drive without calling backend
 
 The following **additional** features are implemented:
 - [ ] List anything else that you can get done to improve the app functionality!
