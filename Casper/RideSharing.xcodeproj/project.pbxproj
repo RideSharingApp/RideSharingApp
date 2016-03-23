@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4DC4AE8A1D5E49EA2C853C5C /* Pods_RideSharing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C82A6281E5E1D8D73629179B /* Pods_RideSharing.framework */; };
+		690501C81CA344EB00E767B2 /* DetailRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690501C71CA344EB00E767B2 /* DetailRideViewController.swift */; };
 		69567DA11C9F7F4A008A6844 /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69567DA01C9F7F4A008A6844 /* Ride.swift */; };
 		69F0F1A51C921E4B005A0411 /* CustomSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F0F1A41C921E4B005A0411 /* CustomSearchController.swift */; };
 		69F0F1A71C921E7B005A0411 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F0F1A61C921E7B005A0411 /* CustomSearchBar.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		690501C71CA344EB00E767B2 /* DetailRideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRideViewController.swift; sourceTree = "<group>"; };
 		69567DA01C9F7F4A008A6844 /* Ride.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
 		69F0F1A41C921E4B005A0411 /* CustomSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchController.swift; sourceTree = "<group>"; };
 		69F0F1A61C921E7B005A0411 /* CustomSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				75CA27941C90D1320029FEF4 /* SignInSignUp View Controllers */,
 				71A2E6421C8E26CB0093FA08 /* Libraries */,
 				716FA70D1C863AA400ACF307 /* AppDelegate.swift */,
+				690501C71CA344EB00E767B2 /* DetailRideViewController.swift */,
 				716FA70F1C863AA400ACF307 /* ViewController.swift */,
 				71A2E6431C8E2A0A0093FA08 /* RideTableViewCell.swift */,
 				71A2E6401C8E26A50093FA08 /* RideViewController.swift */,
@@ -296,6 +299,7 @@
 				75CA27901C8F815A0029FEF4 /* CreateAUserViewController.swift in Sources */,
 				75CA278C1C8F81360029FEF4 /* SignInViewController.swift in Sources */,
 				71A2E63F1C8E1FB70093FA08 /* SWRevealViewController.m in Sources */,
+				690501C81CA344EB00E767B2 /* DetailRideViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

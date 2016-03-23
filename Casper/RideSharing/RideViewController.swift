@@ -67,7 +67,7 @@ class RideViewController: UIViewController, UITableViewDelegate, UITableViewData
                 // do something with the data fetched
                 self.info = info
                 
-                print(info)
+                //print(info)
             } else {
                 // handle error
                 print("\(error)")
@@ -97,7 +97,7 @@ class RideViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("You selected cell #\(indexPath.row)!")
+        self.performSegueWithIdentifier("detailRideSegue", sender: indexPath)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -107,6 +107,16 @@ class RideViewController: UIViewController, UITableViewDelegate, UITableViewData
             return 0
         }
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "detailRideSegue" {
+            let vc = segue.destinationViewController as! DetailRideViewController
+            let indexPath = sender as! NSIndexPath
+            let ride = self.info[indexPath.row]
+            vc.ride = ride
+        }
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -122,18 +132,6 @@ class RideViewController: UIViewController, UITableViewDelegate, UITableViewData
         customSearchController.customDelegate = self
     }
     
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     deinit {
         tableView.dg_removePullToRefresh()
