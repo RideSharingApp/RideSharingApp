@@ -16,6 +16,8 @@ class RideViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    var info:[PFObject]!
+
     
     var shouldShowSearchResults = false
     var customSearchController: CustomSearchController!
@@ -54,12 +56,44 @@ class RideViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func retrieve() {
-        // loading code here
+        let query = PFQuery(className: "Ride")
+        query.orderByDescending("createdAt")
+        query.includeKey("author")
+        query.limit = 20
+        
+        // fetch data asynchronously
+        query.findObjectsInBackgroundWithBlock { (info: [PFObject]?, error: NSError?) -> Void in
+            if let info = info {
+                // do something with the data fetched
+                self.info = info
+                
+                print(info)
+            } else {
+                // handle error
+                print("\(error)")
+            }
+            self.tableView.reloadData()
+        }
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("RideCell") as? RideTableViewCell!
-        return cell!
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("RideCell", forIndexPath: indexPath) as! RideTableViewCell
+        let info = self.info[indexPath.row]
+        cell.fromLabel.text = info["departurePoint"] as! String
+        cell.tolabel.text = info["arrivalPoint"] as! String
+        
+        let olddate = info["dateAndTime"] as! NSDate
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        let date = formatter.stringFromDate(olddate)
+        cell.timeLabel.text = "\(date)"
+        cell.priceLabel.text = info["price"] as! String
+        cell.timeLabel.sizeToFit()
+        //cell.seatLabel.text = info[""]
+        //cell.profileImage
+        
+        
+        return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -67,7 +101,11 @@ class RideViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        if let info = self.info{
+            return info.count
+        }else{
+            return 0
+        }
     }
     
     override func didReceiveMemoryWarning() {
