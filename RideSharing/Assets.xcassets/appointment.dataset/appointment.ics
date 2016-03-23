@@ -1,9 +1,0 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:KrannertCalendarApp
-BEGIN:VEVENT
-DTSTART:20160411T153000Z
-DTEND:20160411T160000Z
-SUMMARY:Akshat Goyal's appointment at College of Science-Undergraduate Advisor Appointment
-END:VEVENT
-END:VCALENDAR
