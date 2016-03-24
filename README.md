@@ -8,12 +8,12 @@
 
 The following **required** functionality is completed:
 - [x] Login/Signup functionality [phone number verification] [Karly]
-- [ ] Find drives [Jiayi]
+- [x] Find drives [Jiayi]
 - [ ] Settings [Tarang]
 - [ ] lougout [Tarang]
 - [x] Integrate Parse [Karly]
 - [ ] Facebook login [Karly]
-- [ ] Detailed ride view controller [Akshat]
+- [x] Detailed ride view controller [Akshat]
 - [x] Upload rides to Parse [Akshat]
 - [x] Login/Signup UI [Akshat] 
 - [ ] Custom Search bar [Tarang]
