@@ -762,7 +762,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6DD-ij-nay">
-                                <rect key="frame" x="15" y="345" width="88" height="21"/>
+                                <rect key="frame" x="15" y="345" width="345" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -806,6 +806,7 @@
                             <constraint firstItem="6DD-ij-nay" firstAttribute="leading" secondItem="lJh-Qn-Rmt" secondAttribute="leadingMargin" constant="-5" id="QJ0-oK-xm3"/>
                             <constraint firstItem="6DD-ij-nay" firstAttribute="leading" secondItem="lJh-Qn-Rmt" secondAttribute="leading" constant="15" id="SY5-19-0zD"/>
                             <constraint firstItem="6DD-ij-nay" firstAttribute="top" secondItem="lJh-Qn-Rmt" secondAttribute="topMargin" constant="345" id="ldR-AI-pOB"/>
+                            <constraint firstAttribute="trailing" secondItem="6DD-ij-nay" secondAttribute="trailing" constant="15" id="zd3-BQ-uf8"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">

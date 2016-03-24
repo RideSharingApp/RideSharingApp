@@ -45,7 +45,7 @@ class DetailRideViewController: UIViewController {
     }
     
     func setRideDetails() {
-        fromLbl.text = ride!.objectForKey("firstName") as? String
+        fromLbl.text = ride!["departurePoint"] as? String
         toLbl.text = ride!["arrivalPoint"] as? String
         let date = ride!["dateAndTime"] as! NSDate
         let formatter = NSDateFormatter()
