@@ -1,4 +1,4 @@
-# Casper - is a cheap and most convinient way to reach a destination!
+# Casper - is a cheap and super convinient way to reach a destination!
 
 *Casper*
 
@@ -10,7 +10,7 @@ The following **required** functionality is completed:
 - [x] Login/Signup functionality [phone number verification] [Karly]
 - [x] Find drives [Jiayi]
 - [ ] Settings [Tarang]
-- [ ] lougout [Tarang]
+- [x] logout [Tarang]
 - [x] Integrate Parse [Karly]
 - [ ] Facebook login [Karly]
 - [x] Detailed ride view controller [Akshat]
@@ -60,7 +60,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/RideSharingApp/RideSharingApp/blob/master/RideShare_gif.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
