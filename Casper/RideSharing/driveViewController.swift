@@ -45,6 +45,8 @@ class driveViewController: UIViewController {
     @IBOutlet weak var dateView: UIDatePicker!
     @IBOutlet weak var toTxt: UITextField!
     @IBOutlet weak var fronTxt: UITextField!
+    @IBOutlet weak var seats: UITextField!
+    
 
     @IBAction func onPost(sender: AnyObject) {
         let formatter = NSDateFormatter()
@@ -55,7 +57,7 @@ class driveViewController: UIViewController {
         print(date)
         
         
-        Ride.postRide(fronTxt.text, arrivalPoint: toTxt.text, dateAndTime: dateView.date, price: priceTxt.text, description: desTxt.text, availability: true) { (success: Bool, error: NSError?) -> Void in
+        Ride.postRide(fronTxt.text, arrivalPoint: toTxt.text, dateAndTime: dateView.date, price: priceTxt.text, description: desTxt.text, availability: true, seats: Int(seats.text!)) { (success: Bool, error: NSError?) -> Void in
             if (success) {
                 print("success")
                 // segue

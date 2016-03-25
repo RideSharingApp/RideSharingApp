@@ -12,7 +12,7 @@ import Parse
 
 class Ride : NSObject {
     
-    class func postRide (departurePoint: String?, arrivalPoint: String?, dateAndTime: NSDate?, price: String?, description: String?, availability: Bool?, withCompletion completion: PFBooleanResultBlock? ) {
+    class func postRide (departurePoint: String?, arrivalPoint: String?, dateAndTime: NSDate?, price: String?, description: String?, availability: Bool?, seats:Int?, withCompletion completion: PFBooleanResultBlock? ) {
         let ride = PFObject(className: "Ride")
         
         ride["departurePoint"] = departurePoint
@@ -22,6 +22,7 @@ class Ride : NSObject {
         ride["description"] = description
         ride["availability"] = availability
         ride["driver"] = PFUser.currentUser()
+        ride["seats"] = seats
         
         ride.saveInBackgroundWithBlock(completion)
     }

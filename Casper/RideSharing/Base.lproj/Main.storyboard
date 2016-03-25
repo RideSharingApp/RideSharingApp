@@ -598,6 +598,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eB6-2Q-a6Y">
+                                <rect key="frame" x="20" y="151" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kaO-it-BUr">
                                 <rect key="frame" x="20" y="420" width="335" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -609,7 +614,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="evy-0i-3Vx">
-                                <rect key="frame" x="163" y="531" width="51" height="31"/>
+                                <rect key="frame" x="163" y="512" width="51" height="31"/>
                             </switch>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="wqy-la-jeR">
                                 <rect key="frame" x="0.0" y="196" width="375" height="216"/>
@@ -627,8 +632,8 @@
                                     <action selector="onPost:" destination="OXx-MD-svN" eventType="touchUpInside" id="c59-Qm-ppK"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eB6-2Q-a6Y">
-                                <rect key="frame" x="20" y="151" width="335" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seats to offer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S3z-Mz-Y7O">
+                                <rect key="frame" x="20" y="551" width="335" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -646,6 +651,7 @@
                         <outlet property="fronTxt" destination="2q0-Ug-OAz" id="0wh-D5-Czh"/>
                         <outlet property="menuButton" destination="YW5-1a-aMp" id="fao-ZU-SRU"/>
                         <outlet property="priceTxt" destination="kaO-it-BUr" id="7YB-ed-GzC"/>
+                        <outlet property="seats" destination="S3z-Mz-Y7O" id="8rr-Su-GPp"/>
                         <outlet property="toTxt" destination="eB6-2Q-a6Y" id="AOV-b7-tq9"/>
                         <segue destination="pR4-kN-iOj" kind="show" identifier="posted" customClass="SWRevealViewControllerSeguePushController" id="lA0-5y-XWZ"/>
                     </connections>
@@ -677,6 +683,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="112.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="user-icon-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="LCB-Mf-Gge">
+                                                    <rect key="frame" x="8" y="8" width="87" height="96"/>
+                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Star-48" translatesAutoresizingMaskIntoConstraints="NO" id="L1t-Zu-tRs">
                                                     <rect key="frame" x="103" y="69" width="33" height="35"/>
                                                 </imageView>
@@ -728,18 +737,15 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Star-48" translatesAutoresizingMaskIntoConstraints="NO" id="LKe-Bk-BGL">
                                                     <rect key="frame" x="265" y="69" width="33" height="35"/>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="5_stars.svg" translatesAutoresizingMaskIntoConstraints="NO" id="FsI-vK-su4">
+                                                    <rect key="frame" x="103" y="65" width="185" height="39.5"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Mb-lN-rPj">
-                                                    <rect key="frame" x="319" y="73" width="39" height="31"/>
+                                                    <rect key="frame" x="307" y="73" width="68" height="31"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="22"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="5_stars.svg" translatesAutoresizingMaskIntoConstraints="NO" id="FsI-vK-su4">
-                                                    <rect key="frame" x="103" y="65" width="195" height="39.5"/>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="user-icon-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="LCB-Mf-Gge">
-                                                    <rect key="frame" x="8" y="8" width="87" height="96"/>
-                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.71577099116161613" green="0.71577099116161613" blue="0.71577099116161613" alpha="0.75" colorSpace="calibratedRGB"/>
@@ -1040,7 +1046,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="xI7-nE-2Xf"/>
         <segue reference="XsE-Nf-M8X"/>
-        <segue reference="rJD-w7-ZcC"/>
+        <segue reference="lA0-5y-XWZ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.81176470590000005" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
 </document>

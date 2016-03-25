@@ -87,7 +87,8 @@ class RideViewController: UIViewController, UITableViewDelegate, UITableViewData
         formatter.dateFormat = "yyyy-MM-dd HH:mm"
         let date = formatter.stringFromDate(olddate)
         cell.timeLabel.text = "\(date)"
-        cell.priceLabel.text = info["price"] as! String
+        cell.priceLabel.text = (info["price"] as! String)+"$"
+        cell.seatLabel.text = String(info["seats"] as! Int)
         cell.timeLabel.sizeToFit()
         //cell.seatLabel.text = info[""]
         //cell.profileImage
