@@ -595,37 +595,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="From" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2q0-Ug-OAz">
-                                <rect key="frame" x="20" y="88" width="335" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eB6-2Q-a6Y">
-                                <rect key="frame" x="20" y="151" width="335" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kaO-it-BUr">
-                                <rect key="frame" x="20" y="420" width="335" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mfV-bZ-S1i">
-                                <rect key="frame" x="20" y="474" width="335" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="evy-0i-3Vx">
-                                <rect key="frame" x="163" y="512" width="51" height="31"/>
-                            </switch>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="wqy-la-jeR">
-                                <rect key="frame" x="0.0" y="196" width="375" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="480214913.86264199">
-                                    <!--2016-03-21 01:01:53 +0000-->
-                                </date>
-                            </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wP2-nj-Juj">
-                                <rect key="frame" x="0.0" y="597" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="629" width="375" height="38"/>
                                 <color key="backgroundColor" red="0.81176470590000005" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Post">
                                     <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -634,9 +605,40 @@
                                     <action selector="onPost:" destination="OXx-MD-svN" eventType="touchUpInside" id="c59-Qm-ppK"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seats to offer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S3z-Mz-Y7O">
-                                <rect key="frame" x="20" y="551" width="335" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="wqy-la-jeR">
+                                <rect key="frame" x="0.0" y="236" width="375" height="136"/>
+                                <date key="date" timeIntervalSinceReferenceDate="480214913.86264199">
+                                    <!--2016-03-21 01:01:53 +0000-->
+                                </date>
+                            </datePicker>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="From" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="iGH-fO-pua" customClass="MKTextField" customModule="MaterialKit">
+                                <rect key="frame" x="20" y="99" width="335" height="35"/>
+                                <color key="textColor" red="1" green="0.55039779259999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="To" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zju-jV-GUC" customClass="MKTextField" customModule="MaterialKit">
+                                <rect key="frame" x="20" y="170" width="335" height="35"/>
+                                <color key="textColor" red="1" green="0.55039779259999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sor-Vr-pa6" customClass="MKTextField" customModule="MaterialKit">
+                                <rect key="frame" x="20" y="486" width="335" height="35"/>
+                                <color key="textColor" red="1" green="0.55039779259999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Seats to offer" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RYp-1j-pbL" customClass="MKTextField" customModule="MaterialKit">
+                                <rect key="frame" x="20" y="550" width="335" height="35"/>
+                                <color key="textColor" red="1" green="0.55039779259999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Price" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uJe-Jd-sVR" customClass="MKTextField" customModule="MaterialKit">
+                                <rect key="frame" x="20" y="417" width="335" height="35"/>
+                                <color key="textColor" red="1" green="0.55039779259999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
@@ -647,14 +649,13 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="availSwitch" destination="evy-0i-3Vx" id="bit-ct-kR7"/>
                         <outlet property="dateView" destination="wqy-la-jeR" id="IIv-Cf-Ms6"/>
-                        <outlet property="desTxt" destination="mfV-bZ-S1i" id="9Gl-48-UQr"/>
-                        <outlet property="fronTxt" destination="2q0-Ug-OAz" id="0wh-D5-Czh"/>
+                        <outlet property="desTxt" destination="sor-Vr-pa6" id="D6Z-I3-ItQ"/>
+                        <outlet property="fronTxt" destination="iGH-fO-pua" id="Nbx-mK-UPi"/>
                         <outlet property="menuButton" destination="YW5-1a-aMp" id="fao-ZU-SRU"/>
-                        <outlet property="priceTxt" destination="kaO-it-BUr" id="7YB-ed-GzC"/>
-                        <outlet property="seats" destination="S3z-Mz-Y7O" id="8rr-Su-GPp"/>
-                        <outlet property="toTxt" destination="eB6-2Q-a6Y" id="AOV-b7-tq9"/>
+                        <outlet property="priceTxt" destination="uJe-Jd-sVR" id="IQ4-R5-Kq4"/>
+                        <outlet property="seats" destination="RYp-1j-pbL" id="DIS-tb-Skz"/>
+                        <outlet property="toTxt" destination="zju-jV-GUC" id="kw6-LC-BaY"/>
                         <segue destination="pR4-kN-iOj" kind="show" identifier="posted" customClass="SWRevealViewControllerSeguePushController" id="lA0-5y-XWZ"/>
                     </connections>
                 </viewController>
@@ -1079,7 +1080,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="XsE-Nf-M8X"/>
         <segue reference="xI7-nE-2Xf"/>
-        <segue reference="rJD-w7-ZcC"/>
+        <segue reference="lA0-5y-XWZ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.81176470590000005" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
 </document>

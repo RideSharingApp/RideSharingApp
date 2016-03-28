@@ -8,6 +8,7 @@ PODS:
   - MotionAnimation (0.0.5)
   - Parse (1.12.0):
     - Bolts/Tasks (~> 1.5)
+  - SCLAlertView (0.5.1)
   - TwilioSDK (1.2.7)
 
 DEPENDENCIES:
@@ -16,6 +17,7 @@ DEPENDENCIES:
   - ElasticTransition
   - MaterialKit (~> 0.4)
   - Parse
+  - SCLAlertView
   - TwilioSDK (~> 1.2)
 
 SPEC CHECKSUMS:
@@ -26,6 +28,7 @@ SPEC CHECKSUMS:
   MaterialKit: 2e5267bcf410b82793f2b92d2111f8ae4ed2c3f2
   MotionAnimation: d9d4060bf4f494dd61bf868b8969a31b1b0b6f2a
   Parse: de2c52a9a1421b91ae7594ab8ce191afd184f19b
+  SCLAlertView: 3ac39a863d3e10fc165662b1228b03402297aea9
   TwilioSDK: d3982acf6880ddf3ce57c4444e021a71c5f35653
 
 COCOAPODS: 0.39.0

@@ -10,5 +10,6 @@ target 'RideSharing' do
     pod "ElasticTransition"
     pod 'TwilioSDK', '~>1.2'
     pod 'MaterialKit', '~> 0.4'
+    pod 'SCLAlertView'
 end
 

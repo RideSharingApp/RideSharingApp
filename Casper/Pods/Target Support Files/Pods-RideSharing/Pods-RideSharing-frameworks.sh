@@ -91,6 +91,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-RideSharing/MaterialKit.framework"
   install_framework "Pods-RideSharing/MotionAnimation.framework"
   install_framework "Pods-RideSharing/Parse.framework"
+  install_framework "Pods-RideSharing/SCLAlertView.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-RideSharing/Bolts.framework"
@@ -100,4 +101,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-RideSharing/MaterialKit.framework"
   install_framework "Pods-RideSharing/MotionAnimation.framework"
   install_framework "Pods-RideSharing/Parse.framework"
+  install_framework "Pods-RideSharing/SCLAlertView.framework"
 fi

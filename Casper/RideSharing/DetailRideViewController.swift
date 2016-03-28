@@ -54,7 +54,7 @@ class DetailRideViewController: UIViewController {
         timeDateLbl.text = dateString
         seatLbl.text = "\(ride!["seats"] as! Int) Seat(s) available"
         priceLbl.text = "\(ride!["price"])/seat"
-        desLbl.text = "\" \(ride!["description"] as! String)\""
+        desLbl.text = "\"\(ride!["description"] as! String)\""
         
     }
 
