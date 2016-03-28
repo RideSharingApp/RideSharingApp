@@ -16,6 +16,7 @@ The following **required** functionality is completed:
 - [x] Detailed ride view controller [Akshat]
 - [x] Upload rides to Parse [Akshat]
 - [x] Login/Signup UI [Akshat] 
+- [x] Profile View [Tarang]
 - [ ] Custom Search bar [Tarang]
 - [x] SlideOut Menu Controller [Tarang]
 
