@@ -4,6 +4,7 @@ PODS:
   - DGElasticPullToRefresh (1.0.3)
   - ElasticTransition (2.1.0):
     - MotionAnimation (~> 0.0.5)
+  - MaterialKit (0.4)
   - MotionAnimation (0.0.5)
   - Parse (1.12.0):
     - Bolts/Tasks (~> 1.5)
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - DGActivityIndicatorView
   - DGElasticPullToRefresh
   - ElasticTransition
+  - MaterialKit (~> 0.4)
   - Parse
   - TwilioSDK (~> 1.2)
 
@@ -21,6 +23,7 @@ SPEC CHECKSUMS:
   DGActivityIndicatorView: 52875b025a6ccf6a431a905285c12e2bb95eb559
   DGElasticPullToRefresh: 040f39ae69840b3261d163fe6735c5901bf851e9
   ElasticTransition: 7c04b2ad4323fc4b18475c60f061cf4be7399f00
+  MaterialKit: 2e5267bcf410b82793f2b92d2111f8ae4ed2c3f2
   MotionAnimation: d9d4060bf4f494dd61bf868b8969a31b1b0b6f2a
   Parse: de2c52a9a1421b91ae7594ab8ce191afd184f19b
   TwilioSDK: d3982acf6880ddf3ce57c4444e021a71c5f35653

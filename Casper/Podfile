@@ -9,5 +9,6 @@ target 'RideSharing' do
     pod 'DGActivityIndicatorView'
     pod "ElasticTransition"
     pod 'TwilioSDK', '~>1.2'
+    pod 'MaterialKit', '~> 0.4'
 end
 

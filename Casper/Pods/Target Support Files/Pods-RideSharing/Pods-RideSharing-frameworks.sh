@@ -88,6 +88,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-RideSharing/DGActivityIndicatorView.framework"
   install_framework "Pods-RideSharing/DGElasticPullToRefresh.framework"
   install_framework "Pods-RideSharing/ElasticTransition.framework"
+  install_framework "Pods-RideSharing/MaterialKit.framework"
   install_framework "Pods-RideSharing/MotionAnimation.framework"
   install_framework "Pods-RideSharing/Parse.framework"
 fi
@@ -96,6 +97,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-RideSharing/DGActivityIndicatorView.framework"
   install_framework "Pods-RideSharing/DGElasticPullToRefresh.framework"
   install_framework "Pods-RideSharing/ElasticTransition.framework"
+  install_framework "Pods-RideSharing/MaterialKit.framework"
   install_framework "Pods-RideSharing/MotionAnimation.framework"
   install_framework "Pods-RideSharing/Parse.framework"
 fi

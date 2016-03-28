@@ -21,6 +21,8 @@ class RideViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var shouldShowSearchResults = false
     var customSearchController: CustomSearchController!
+    lazy var searchBar:UISearchBar = UISearchBar(frame: CGRectMake(0, 200, 200, 20))
+    lazy var searchBar2:UISearchBar = UISearchBar(frame: CGRectMake(0, 200, 200, 20))
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -35,7 +37,15 @@ class RideViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
-        configureCustomSearchController()
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        
+        //configureCustomSearchController()
+        searchBar = UISearchBar()
+        searchBar.sizeToFit()
+        navigationItem.titleView = searchBar
+        searchBar2 = UISearchBar()
+        searchBar2.sizeToFit()
+        navigationItem.titleView = searchBar2
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -98,6 +108,7 @@ class RideViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
         self.performSegueWithIdentifier("detailRideSegue", sender: indexPath)
     }
     
@@ -128,7 +139,8 @@ class RideViewController: UIViewController, UITableViewDelegate, UITableViewData
         customSearchController = CustomSearchController(searchResultsController: self, searchBarFrame: CGRectMake(0.0, 0.0, tableView.frame.size.width, 50.0), searchBarFont: UIFont(name: "Futura", size: 16.0)!, searchBarTextColor: UIColor.orangeColor(), searchBarTintColor: UIColor.blackColor())
         
         customSearchController.customSearchBar.placeholder = "Custom Search..."
-        tableView.tableHeaderView = customSearchController.customSearchBar
+        navigationItem.titleView = customSearchController.customSearchBar
+        //tableView.tableHeaderView = customSearchController.customSearchBar
         
         customSearchController.customDelegate = self
     }

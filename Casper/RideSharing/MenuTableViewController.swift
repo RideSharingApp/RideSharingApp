@@ -13,8 +13,15 @@ class MenuTableViewController: UITableViewController {
     
     @IBOutlet weak var logOutBtn: UIButton!
     
+    @IBOutlet weak var firstNameLabel: UILabel!
+    
+    @IBOutlet weak var lastNameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let user = PFUser.currentUser()
+        firstNameLabel.text = user!["firstName"] as? String
+        lastNameLabel.text = user!["lastName"] as? String
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -89,14 +96,21 @@ class MenuTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if (segue.identifier == "toProfile") { //pass data to VC
+            let svc = (segue.destinationViewController as! UINavigationController).topViewController as! ProfileViewController
+            svc.isCurrentUser = true
+            let user = PFUser.currentUser()
+            print(user)
+            svc.firstName = user!["firstName"] as? String
+            svc.lastName = user!["lastName"] as? String
+            svc.age = user!["age"] as? String
+            svc.gender = user!["gender"] as? String
+        }
     }
-    */
 
 }
