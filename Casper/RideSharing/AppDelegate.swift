@@ -17,8 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        Parse.enableLocalDatastore()
+        
         Parse.setApplicationId("YQWXVmiPab9wJDobwHQ5mHODcfmnYaEiFMLpazwZ",
             clientKey: "RIxD7kenZgr78OJZRWmiOLTuX3n3nlKxMmMOzIXs")
+        
+        
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
         if PFUser.currentUser() != nil {
             let vc = storyboard.instantiateViewControllerWithIdentifier("AlreadyLoggedIn")
