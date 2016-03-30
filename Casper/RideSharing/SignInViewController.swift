@@ -22,6 +22,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     var password: String?
     
     var player : AVPlayer?
+    var playerLayer: AVPlayerLayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,13 +39,13 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         player?.actionAtItemEnd = .None
         player?.muted = true
         
-        let playerLayer = AVPlayerLayer(player: player)
-        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
-        playerLayer.zPosition = -1
+        playerLayer = AVPlayerLayer(player: player)
+        playerLayer!.videoGravity = AVLayerVideoGravityResizeAspectFill
+        playerLayer!.zPosition = -1
         
-        playerLayer.frame = view.frame
+        playerLayer!.frame = view.frame
         
-        view.layer.addSublayer(playerLayer)
+        view.layer.addSublayer(playerLayer!)
         
         player?.play()
         
@@ -160,7 +161,16 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func viewDidDisappear(animated: Bool) {
+        player?.pause()
+        playerLayer?.removeFromSuperlayer()
+        player = nil
+    }
+    
+    
+    @IBAction func onSignUp(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 
