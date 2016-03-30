@@ -77,6 +77,10 @@ class ProfileViewController: UIViewController {
     }
     
     
+    @IBAction func onBack(sender: AnyObject) {
+        
+    }
+    
     @IBAction func callClicked(sender: AnyObject) {
         
     }

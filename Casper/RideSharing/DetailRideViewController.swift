@@ -87,7 +87,33 @@ class DetailRideViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func onUserViewTap(sender: AnyObject) {
+        performSegueWithIdentifier("driverDetailSegue", sender: self)
+    }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if (segue.identifier == "driverDetailSegue") { //pass data to VC
+            let svc = (segue.destinationViewController as! UINavigationController).topViewController as! ProfileViewController
+            svc.isCurrentUser = false
+            
+            svc.firstName = self.user!["firstName"] as? String
+            svc.lastName = self.user!["lastName"] as? String
+            svc.age = self.user!["age"] as? String
+            svc.gender = user!["gender"] as? String
+            //svc.carMakeAndModel = user!["CarMakeAndModel"] as? String
+            svc.profileImage = userImage.image
+            user!.fetchInBackgroundWithBlock { (object, error) -> Void in
+                self.user!.fetchIfNeededInBackgroundWithBlock { (result, error) -> Void in
+                    svc.carMakeAndModel = self.user!.objectForKey("CarMakeAndModel") as? String
+                }
+            }
+            svc.phoneNumber = user!["username"] as? String
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

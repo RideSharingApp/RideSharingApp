@@ -677,7 +677,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XKl-gh-A37" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1421.5" y="2225.5"/>
+            <point key="canvasLocation" x="444.5" y="1863.5"/>
         </scene>
         <!--Find Rides-->
         <scene sceneID="oDP-R6-amO">
@@ -801,7 +801,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gon-BO-qmh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2686.5" y="2241.5"/>
+            <point key="canvasLocation" x="1436.5" y="1863.5"/>
         </scene>
         <!--Detail Ride View Controller-->
         <scene sceneID="J2Q-d3-nX9">
@@ -883,6 +883,10 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="eB1-Qo-4fF" appends="YES" id="gw0-Zs-4hn"/>
+                                </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Model and Make" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRG-pl-qoc">
                                 <rect key="frame" x="20" y="374" width="158" height="21"/>
@@ -920,11 +924,17 @@
                         <outlet property="userGenderLbl" destination="yZo-Ex-fEg" id="h0F-7v-hot"/>
                         <outlet property="userImage" destination="DgQ-Cf-7Np" id="fWv-Tg-iVP"/>
                         <outlet property="userNameLbl" destination="Bg6-7r-el7" id="HrW-XK-8eO"/>
+                        <segue destination="vRw-sl-3iZ" kind="show" identifier="driverDetailSegue" id="TCi-p7-BZi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pie-d8-O5w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="eB1-Qo-4fF">
+                    <connections>
+                        <action selector="onUserViewTap:" destination="oPf-3f-h1r" id="2tK-ZR-gQ6"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3122.5" y="2241.5"/>
+            <point key="canvasLocation" x="1880.5" y="1863.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uGZ-NI-ynn">
@@ -943,7 +953,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tb6-EL-6bZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1978.5" y="2233.5"/>
+            <point key="canvasLocation" x="958.5" y="1863.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jNn-WZ-jce">
@@ -961,13 +971,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6fu-tv-5JV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="904.5" y="2225.5"/>
+            <point key="canvasLocation" x="-3.5" y="1863.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CJ5-bF-2gM">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MZ1-Dt-oFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vRw-sl-3iZ" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="hag-lX-e8b"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WSy-Bu-ogn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -977,7 +989,6 @@
                         <segue destination="aTQ-o0-gCD" kind="relationship" relationship="rootViewController" id="OBJ-8C-o9X"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MZ1-Dt-oFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="984.5" y="965.5"/>
         </scene>
@@ -1059,7 +1070,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="6Sg-DV-nsh">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="zb6-Zd-xS0"/>
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="zb6-Zd-xS0">
+                            <connections>
+                                <action selector="onBack:" destination="aTQ-o0-gCD" id="4Pa-IM-QRh"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -1106,7 +1121,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="pBf-vz-pkR"/>
-        <segue reference="6mR-Qw-xnu"/>
+        <segue reference="WvU-EQ-YY1"/>
+        <segue reference="rJD-w7-ZcC"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.81176470590000005" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
 </document>
