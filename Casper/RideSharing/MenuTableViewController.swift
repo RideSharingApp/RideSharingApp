@@ -124,8 +124,14 @@ class MenuTableViewController: UITableViewController {
             svc.lastName = user!["lastName"] as? String
             svc.age = user!["age"] as? String
             svc.gender = user!["gender"] as? String
+            //svc.carMakeAndModel = user!["CarMakeAndModel"] as? String
             svc.profileImage = profileImageView.image
-
+            user!.fetchInBackgroundWithBlock { (object, error) -> Void in
+                user!.fetchIfNeededInBackgroundWithBlock { (result, error) -> Void in
+                    svc.carMakeAndModel = user!.objectForKey("CarMakeAndModel") as? String
+                }
+            }
+            svc.phoneNumber = user!["username"] as? String
         }
     }
 

@@ -22,6 +22,7 @@ class CreateAUserViewController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordAgainTextField: UITextField!
     
+    @IBOutlet weak var carMakeAndModel: UITextField!
     @IBOutlet weak var profilePictureImageView: UIImageView!
     @IBOutlet weak var createUserButton: UIButton!
     
@@ -70,6 +71,7 @@ class CreateAUserViewController: UIViewController, UIImagePickerControllerDelega
         newUser["lastName"] = lastnameTextField.text
         newUser["age"] = ageTextField.text
         newUser["gender"] = genderTextField.text
+        newUser["CarMakeAndModel"] = carMakeAndModel.text
         newUser["profilePicture"] = getPFFileFromImage(self.profilePictureImageView.image)
         if passwordTextField.text == passwordAgainTextField.text {
             newUser.password = passwordTextField.text
@@ -154,6 +156,9 @@ class CreateAUserViewController: UIViewController, UIImagePickerControllerDelega
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func onTap(sender: AnyObject) {
+        self.view.endEditing(true)
+    }
 
     /*
     // MARK: - Navigation

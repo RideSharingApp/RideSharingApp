@@ -29,13 +29,15 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var ageLabel: UILabel!
     
     @IBOutlet weak var callBtn: UIButton!
+    @IBOutlet weak var phoneNumberLbl: UILabel!
     
     var firstName : String?
     var lastName : String?
     var age : String?
-    var phoneNumber: Int?
+    var phoneNumber: String?
     var gender: String?
     var profileImage:UIImage?
+    var carMakeAndModel: String?
     
     var isCurrentUser = false
     
@@ -56,10 +58,17 @@ class ProfileViewController: UIViewController {
         lastNameLabel.text = lastName
         genderLabel.text = gender
         ageLabel.text = age
+        print(carMakeAndModel)
+        if (carMakeAndModel == nil) {
+            carLabel.text = "No car added!"
+        } else {
+            carLabel.text = carMakeAndModel
+        }
         if(isCurrentUser) {
             callBtn.hidden = true
         }
         self.profileImageView.image = profileImage
+        self.phoneNumberLbl.text = phoneNumber
     }
 
     override func didReceiveMemoryWarning() {

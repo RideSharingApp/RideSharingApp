@@ -173,12 +173,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QQF-ix-jqj">
-                                <rect key="frame" x="20" y="426" width="288" height="30"/>
+                                <rect key="frame" x="20" y="464" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Retype Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uaF-tm-3y6">
-                                <rect key="frame" x="20" y="484" width="288" height="30"/>
+                                <rect key="frame" x="20" y="511" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -192,12 +192,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password should be at least 6 characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKu-Gh-AGj">
-                                <rect key="frame" x="20" y="464" width="199" height="12"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cAb-Qr-xEU">
                                 <rect key="frame" x="20" y="236" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -212,12 +206,28 @@
                                     <action selector="onCreate:" destination="xMV-Wa-Eg9" eventType="touchUpInside" id="lgD-c5-ZNt"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Car Make and Model" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gpj-vK-e2T">
+                                <rect key="frame" x="20" y="426" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password should be at least 6 characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKu-Gh-AGj">
+                                <rect key="frame" x="20" y="496" width="199" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="0H2-xb-9pC" appends="YES" id="deL-R8-pPj"/>
+                        </connections>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="ageTextField" destination="G4r-6o-I9p" id="brl-Xp-ZZq"/>
+                        <outlet property="carMakeAndModel" destination="gpj-vK-e2T" id="ytm-Zc-WdB"/>
                         <outlet property="createUserButton" destination="vkJ-kO-ewM" id="H9h-pM-aQ6"/>
                         <outlet property="firstnameTextField" destination="6hy-pl-3gM" id="ftP-K3-y4N"/>
                         <outlet property="genderTextField" destination="BeP-5H-qEh" id="URj-pP-m8G"/>
@@ -230,6 +240,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a1v-MZ-YPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0H2-xb-9pC">
+                    <connections>
+                        <action selector="onTap:" destination="xMV-Wa-Eg9" id="l3y-YL-TBD"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="103.5" y="-395.5"/>
         </scene>
@@ -869,12 +884,20 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Model and Make" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRG-pl-qoc">
+                                <rect key="frame" x="20" y="374" width="158" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="zRG-pl-qoc" firstAttribute="top" secondItem="6DD-ij-nay" secondAttribute="bottom" constant="8" id="8rO-ri-gtH"/>
                             <constraint firstItem="6DD-ij-nay" firstAttribute="leading" secondItem="lJh-Qn-Rmt" secondAttribute="leadingMargin" constant="-5" id="QJ0-oK-xm3"/>
                             <constraint firstItem="6DD-ij-nay" firstAttribute="leading" secondItem="lJh-Qn-Rmt" secondAttribute="leading" constant="15" id="SY5-19-0zD"/>
                             <constraint firstItem="6DD-ij-nay" firstAttribute="top" secondItem="lJh-Qn-Rmt" secondAttribute="topMargin" constant="345" id="ldR-AI-pOB"/>
+                            <constraint firstItem="zRG-pl-qoc" firstAttribute="leading" secondItem="lJh-Qn-Rmt" secondAttribute="leading" constant="20" id="yzD-m2-gFW"/>
                             <constraint firstAttribute="trailing" secondItem="6DD-ij-nay" secondAttribute="trailing" constant="15" id="zd3-BQ-uf8"/>
                         </constraints>
                         <variation key="default">
@@ -886,6 +909,7 @@
                     <navigationItem key="navigationItem" id="Ld5-s7-bUS"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="carMakeAndModel" destination="zRG-pl-qoc" id="jOU-xq-UMf"/>
                         <outlet property="desLbl" destination="6DD-ij-nay" id="t3z-LF-Ugt"/>
                         <outlet property="fromLbl" destination="pq8-eC-LwS" id="7bH-i8-QAF"/>
                         <outlet property="priceLbl" destination="S3W-Ls-bLv" id="yIt-PC-R8O"/>
@@ -999,12 +1023,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1234" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNl-Vh-GyC">
-                                        <rect key="frame" x="239" y="415" width="43" height="31"/>
+                                        <rect key="frame" x="145" y="415" width="222" height="31"/>
                                         <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="22"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypY-7G-7wh">
-                                        <rect key="frame" x="0.0" y="413" width="375" height="41"/>
+                                        <rect key="frame" x="0.0" y="415" width="375" height="41"/>
                                         <color key="backgroundColor" red="0.81176470590000005" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Call this driver">
                                             <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -1046,6 +1070,7 @@
                         <outlet property="genderLabel" destination="tbV-k7-xZW" id="emM-UA-g0k"/>
                         <outlet property="lastNameLabel" destination="Jv0-Ks-PR1" id="2hj-ew-lVa"/>
                         <outlet property="menuButton" destination="zb6-Zd-xS0" id="omp-KM-ytt"/>
+                        <outlet property="phoneNumberLbl" destination="hNl-Vh-GyC" id="n9I-7Q-MLu"/>
                         <outlet property="profileImageView" destination="RUt-0M-cgb" id="9DK-wc-bNk"/>
                     </connections>
                 </viewController>
@@ -1080,8 +1105,8 @@
         <image name="user-icon-placeholder" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8aB-Lo-hJo"/>
-        <segue reference="rJD-w7-ZcC"/>
+        <segue reference="pBf-vz-pkR"/>
+        <segue reference="6mR-Qw-xnu"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.81176470590000005" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
 </document>

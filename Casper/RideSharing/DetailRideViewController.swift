@@ -24,6 +24,7 @@ class DetailRideViewController: UIViewController {
     @IBOutlet weak var userNameLbl: UILabel!
     @IBOutlet weak var userAgeLbl: UILabel!
     @IBOutlet weak var userGenderLbl: UILabel!
+    @IBOutlet weak var carMakeAndModel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         print(ride)
@@ -62,6 +63,11 @@ class DetailRideViewController: UIViewController {
         userNameLbl.text = user!["firstName"] as? String
         userAgeLbl.text = "\((user!["age"] as? String)!) years"
         userGenderLbl.text = user!["gender"] as? String
+        user!.fetchInBackgroundWithBlock { (object, error) -> Void in
+            self.user!.fetchIfNeededInBackgroundWithBlock { (result, error) -> Void in
+                self.carMakeAndModel.text = "Car: \((self.user!.objectForKey("CarMakeAndModel") as? String)!)"
+            }
+        }
         //get profile image
         if let picturefile = user!["profilePicture"] {
             picturefile.getDataInBackgroundWithBlock { (data:NSData?, error:NSError?) -> Void in
@@ -73,7 +79,8 @@ class DetailRideViewController: UIViewController {
                 }
                 
             }
-        }    }
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
