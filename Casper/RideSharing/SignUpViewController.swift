@@ -12,43 +12,53 @@ import AVFoundation
 
 class SignUpViewController: UIViewController {
 
-    var player: AVPlayer?
-    
+    var player1: AVPlayer?
+    var playerLayer1: AVPlayerLayer?
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        let videoURL: NSURL = NSBundle.mainBundle().URLForResource("LoginVideo", withExtension: "mp4")!
         
-        player = AVPlayer(URL: videoURL)
-        player?.actionAtItemEnd = .None
-        player?.muted = true
-        
-        let playerLayer = AVPlayerLayer(player: player)
-        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
-        playerLayer.zPosition = -1
-        
-        playerLayer.frame = view.frame
-        
-        view.layer.addSublayer(playerLayer)
-        
-        player?.play()
-        
-        //loop video
-        NSNotificationCenter.defaultCenter().addObserver(self,
-            selector: "loopVideo",
-            name: AVPlayerItemDidPlayToEndTimeNotification,
-            object: nil)
     }
     
     func loopVideo() {
-        player?.seekToTime(kCMTimeZero)
-        player?.play()
+        player1?.seekToTime(kCMTimeZero)
+        player1?.play()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        let videoURL: NSURL = NSBundle.mainBundle().URLForResource("LoginVideo", withExtension: "mp4")!
+        
+        player1 = AVPlayer(URL: videoURL)
+        player1?.actionAtItemEnd = .None
+        player1?.muted = true
+        
+        playerLayer1 = AVPlayerLayer(player: player1)
+        playerLayer1!.videoGravity = AVLayerVideoGravityResizeAspectFill
+        playerLayer1!.zPosition = -1
+        
+        playerLayer1!.frame = view.frame
+        
+        view.layer.addSublayer(playerLayer1!)
+        
+        player1?.play()
+        
+        //loop video
+        NSNotificationCenter.defaultCenter().addObserver(self,
+                                                         selector: "loopVideo",
+                                                         name: AVPlayerItemDidPlayToEndTimeNotification,
+                                                         object: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        player1?.pause()
+        playerLayer1?.removeFromSuperlayer()
+        player1 = nil
     }
     
 

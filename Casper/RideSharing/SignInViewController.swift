@@ -33,6 +33,10 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         
         
         // Do any additional setup after loading the view.
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         let videoURL: NSURL = NSBundle.mainBundle().URLForResource("LoginVideo", withExtension: "mp4")!
         
         player = AVPlayer(URL: videoURL)
@@ -51,9 +55,9 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         
         //loop video
         NSNotificationCenter.defaultCenter().addObserver(self,
-            selector: "loopVideo",
-            name: AVPlayerItemDidPlayToEndTimeNotification,
-            object: nil)
+                                                         selector: "loopVideo",
+                                                         name: AVPlayerItemDidPlayToEndTimeNotification,
+                                                         object: nil)
     }
     
     func loopVideo() {
