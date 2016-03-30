@@ -62,7 +62,18 @@ class DetailRideViewController: UIViewController {
         userNameLbl.text = user!["firstName"] as? String
         userAgeLbl.text = "\((user!["age"] as? String)!) years"
         userGenderLbl.text = user!["gender"] as? String
-    }
+        //get profile image
+        if let picturefile = user!["profilePicture"] {
+            picturefile.getDataInBackgroundWithBlock { (data:NSData?, error:NSError?) -> Void in
+                if let data = data {
+                    self.userImage.image = UIImage(data: data)
+                    print("success")
+                }else{
+                    print("\(error)")
+                }
+                
+            }
+        }    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -90,7 +90,7 @@ class driveViewController: UIViewController {
         let date = formatter.dateFromString(createdString)
         print(date)
         
-        if(fronTxt.text?.isEmpty != nil || fronTxt.text?.isEmpty != nil || fronTxt.text?.isEmpty != nil || fronTxt.text?.isEmpty != nil || fronTxt.text?.isEmpty != nil) {
+        if(fronTxt.text?.isEmpty == nil) {
             print("empty text field")
             SCLAlertView().showError("Empty textfield(s)", subTitle: "One of the textfields is empty") // Error
             

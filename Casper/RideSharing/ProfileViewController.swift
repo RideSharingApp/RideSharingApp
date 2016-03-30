@@ -18,6 +18,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var firstNameLabel: UILabel!
     
     
+    @IBOutlet var profileImageView: AvatarImageView!
     @IBOutlet weak var lastNameLabel: UILabel!
     
     
@@ -34,6 +35,7 @@ class ProfileViewController: UIViewController {
     var age : String?
     var phoneNumber: Int?
     var gender: String?
+    var profileImage:UIImage?
     
     var isCurrentUser = false
     
@@ -57,6 +59,7 @@ class ProfileViewController: UIViewController {
         if(isCurrentUser) {
             callBtn.hidden = true
         }
+        self.profileImageView.image = profileImage
     }
 
     override func didReceiveMemoryWarning() {

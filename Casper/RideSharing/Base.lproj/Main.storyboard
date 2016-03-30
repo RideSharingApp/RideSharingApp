@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qS7-Br-ShG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qS7-Br-ShG">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -576,6 +576,7 @@
                         <outlet property="firstNameLabel" destination="HpG-V7-plb" id="paX-b6-zlb"/>
                         <outlet property="lastNameLabel" destination="euR-CQ-iGV" id="BXg-RU-igY"/>
                         <outlet property="logOutBtn" destination="b8z-9i-JU6" id="ogs-QB-cfU"/>
+                        <outlet property="profileImageView" destination="jDS-La-2ya" id="edx-AJ-GSN"/>
                         <segue destination="qS7-Br-ShG" kind="presentation" identifier="signInAgain" id="XsE-Nf-M8X"/>
                     </connections>
                 </tableViewController>
@@ -683,14 +684,14 @@
                                         <rect key="frame" x="0.0" y="92" width="375" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fq0-5u-bwZ" id="alo-ru-Y35">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8TZ-Rp-Tuo">
-                                                    <rect key="frame" x="8" y="8" width="359" height="103.5"/>
+                                                    <rect key="frame" x="8" y="8" width="359" height="104"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="user-icon-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="LCB-Mf-Gge">
-                                                            <rect key="frame" x="8" y="9" width="64" height="80.5"/>
+                                                            <rect key="frame" x="8" y="9" width="64" height="81"/>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Star-48" translatesAutoresizingMaskIntoConstraints="NO" id="L1t-Zu-tRs">
                                                             <rect key="frame" x="90" y="61" width="33" height="35"/>
@@ -726,16 +727,16 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Star-48" translatesAutoresizingMaskIntoConstraints="NO" id="awy-hk-jX2">
-                                                            <rect key="frame" x="122" y="62.5" width="33" height="35"/>
+                                                            <rect key="frame" x="122" y="63" width="33" height="35"/>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Star-48" translatesAutoresizingMaskIntoConstraints="NO" id="icM-GB-DU4">
-                                                            <rect key="frame" x="163" y="62.5" width="33" height="35"/>
+                                                            <rect key="frame" x="163" y="63" width="33" height="35"/>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Star-48" translatesAutoresizingMaskIntoConstraints="NO" id="qFa-8L-3in">
-                                                            <rect key="frame" x="195" y="62.5" width="33" height="35"/>
+                                                            <rect key="frame" x="195" y="63" width="33" height="35"/>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Star-48" translatesAutoresizingMaskIntoConstraints="NO" id="LKe-Bk-BGL">
-                                                            <rect key="frame" x="239" y="62.5" width="33" height="35"/>
+                                                            <rect key="frame" x="239" y="63" width="33" height="35"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Mb-lN-rPj">
                                                             <rect key="frame" x="294" y="63" width="68" height="31"/>
@@ -750,7 +751,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="5_stars.svg" translatesAutoresizingMaskIntoConstraints="NO" id="FsI-vK-su4">
-                                                            <rect key="frame" x="75" y="54" width="185" height="39.5"/>
+                                                            <rect key="frame" x="75" y="54" width="185" height="40"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1045,6 +1046,7 @@
                         <outlet property="genderLabel" destination="tbV-k7-xZW" id="emM-UA-g0k"/>
                         <outlet property="lastNameLabel" destination="Jv0-Ks-PR1" id="2hj-ew-lVa"/>
                         <outlet property="menuButton" destination="zb6-Zd-xS0" id="omp-KM-ytt"/>
+                        <outlet property="profileImageView" destination="RUt-0M-cgb" id="9DK-wc-bNk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRr-Vt-aTe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1080,7 +1082,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="XsE-Nf-M8X"/>
         <segue reference="xI7-nE-2Xf"/>
-        <segue reference="lA0-5y-XWZ"/>
+        <segue reference="rJD-w7-ZcC"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.81176470590000005" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
 </document>

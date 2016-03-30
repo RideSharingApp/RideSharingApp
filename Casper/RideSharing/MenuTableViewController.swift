@@ -17,11 +17,25 @@ class MenuTableViewController: UITableViewController {
     
     @IBOutlet weak var lastNameLabel: UILabel!
     
+    @IBOutlet var profileImageView: AvatarImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         let user = PFUser.currentUser()
         firstNameLabel.text = user!["firstName"] as? String
         lastNameLabel.text = user!["lastName"] as? String
+        
+        //get profile image
+        if let picturefile = user!["profilePicture"] {
+            picturefile.getDataInBackgroundWithBlock { (data:NSData?, error:NSError?) -> Void in
+                if let data = data {
+                    self.profileImageView.image = UIImage(data: data)
+                    print("success")
+                }else{
+                    print("\(error)")
+                }
+                
+            }
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -110,6 +124,8 @@ class MenuTableViewController: UITableViewController {
             svc.lastName = user!["lastName"] as? String
             svc.age = user!["age"] as? String
             svc.gender = user!["gender"] as? String
+            svc.profileImage = profileImageView.image
+
         }
     }
 

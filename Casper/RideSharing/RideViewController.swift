@@ -100,10 +100,32 @@ class RideViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.priceLabel.text = (info["price"] as! String)+"$"
         cell.seatLabel.text = String(info["seats"] as! Int)
         cell.timeLabel.sizeToFit()
-        //cell.seatLabel.text = info[""]
-        //cell.profileImage
-        
-        
+        let query = PFUser.query()
+        let driver = info["driver"] as? PFUser
+        let driverID = driver!.objectId
+        print(driverID!)
+        //if driverID != nil {
+        query!.getObjectInBackgroundWithId(driverID!) {
+            (user: PFObject?, error: NSError?) -> Void in
+            //get profile image
+            if user != nil{
+            if let picturefile = user!["profilePicture"] {
+                picturefile.getDataInBackgroundWithBlock { (data:NSData?, error:NSError?) -> Void in
+                    if let data = data {
+                        cell.profileImage.image = UIImage(data: data)
+                        print("success")
+                    }else{
+                        print("\(error)")
+                    }
+                    
+                }
+            }else{
+                cell.profileImage.image = UIImage(named: "user-icon-placeholder")
+            }
+            }
+
+        }
+      //  }
         return cell
     }
     

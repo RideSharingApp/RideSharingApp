@@ -50,6 +50,17 @@ class CreateAUserViewController: UIViewController, UIImagePickerControllerDelega
         profilePictureImageView.addGestureRecognizer(gestureRecognizer)
 
     }
+    
+    func getPFFileFromImage(image: UIImage?) -> PFFile? {
+        // check if image is not nil
+        if let image = image {
+            // get image data and check if that is not nil
+            if let imageData = UIImagePNGRepresentation(image) {
+                return PFFile(name: "image.png", data: imageData)
+            }
+        }
+        return nil
+    }
 
     @IBAction func onCreate(sender: AnyObject) {
         
@@ -59,6 +70,7 @@ class CreateAUserViewController: UIViewController, UIImagePickerControllerDelega
         newUser["lastName"] = lastnameTextField.text
         newUser["age"] = ageTextField.text
         newUser["gender"] = genderTextField.text
+        newUser["profilePicture"] = getPFFileFromImage(self.profilePictureImageView.image)
         if passwordTextField.text == passwordAgainTextField.text {
             newUser.password = passwordTextField.text
         } else {
