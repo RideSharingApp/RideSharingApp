@@ -82,12 +82,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		69567D9F1C9F7F34008A6844 /* Ride */ = {
+		69567D9F1C9F7F34008A6844 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				69567DA01C9F7F4A008A6844 /* Ride.swift */,
 			);
-			name = Ride;
+			name = Models;
 			sourceTree = "<group>";
 		};
 		716FA7011C863AA400ACF307 = {
@@ -112,18 +112,12 @@
 		716FA70C1C863AA400ACF307 /* RideSharing */ = {
 			isa = PBXGroup;
 			children = (
-				69567D9F1C9F7F34008A6844 /* Ride */,
-				75CA27941C90D1320029FEF4 /* SignInSignUp View Controllers */,
+				75D7DAF51CADAE0B00269EDF /* Views */,
+				75D7DAF41CADADF800269EDF /* Controllers */,
+				69567D9F1C9F7F34008A6844 /* Models */,
 				71A2E6421C8E26CB0093FA08 /* Libraries */,
 				716FA70D1C863AA400ACF307 /* AppDelegate.swift */,
-				690501C71CA344EB00E767B2 /* DetailRideViewController.swift */,
-				716FA70F1C863AA400ACF307 /* ViewController.swift */,
-				71A2E6431C8E2A0A0093FA08 /* RideTableViewCell.swift */,
-				71A2E6401C8E26A50093FA08 /* RideViewController.swift */,
-				71A2E6471C8E33590093FA08 /* driveViewController.swift */,
-				71A2E6491C8E38590093FA08 /* ProfileViewController.swift */,
 				75CA27911C90D0580029FEF4 /* Main.storyboard */,
-				7141134C1CA5D1A8004B5B2C /* MenuTableViewController.swift */,
 				716FA7161C863AA400ACF307 /* LaunchScreen.storyboard */,
 				716FA7191C863AA400ACF307 /* Info.plist */,
 				69FDE00B1C9F95780050C5F8 /* Assets.xcassets */,
@@ -153,6 +147,28 @@
 				75CA278F1C8F815A0029FEF4 /* CreateAUserViewController.swift */,
 			);
 			name = "SignInSignUp View Controllers";
+			sourceTree = "<group>";
+		};
+		75D7DAF41CADADF800269EDF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				690501C71CA344EB00E767B2 /* DetailRideViewController.swift */,
+				716FA70F1C863AA400ACF307 /* ViewController.swift */,
+				71A2E6401C8E26A50093FA08 /* RideViewController.swift */,
+				71A2E6471C8E33590093FA08 /* driveViewController.swift */,
+				71A2E6491C8E38590093FA08 /* ProfileViewController.swift */,
+				7141134C1CA5D1A8004B5B2C /* MenuTableViewController.swift */,
+				75CA27941C90D1320029FEF4 /* SignInSignUp View Controllers */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		75D7DAF51CADAE0B00269EDF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				71A2E6431C8E2A0A0093FA08 /* RideTableViewCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		8899D0F946A755382C74886A /* Pods */ = {

@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class MenuTableViewController: UITableViewController {
+class MenuTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var logOutBtn: UIButton!
     
@@ -17,10 +17,12 @@ class MenuTableViewController: UITableViewController {
     
     @IBOutlet weak var lastNameLabel: UILabel!
     
+    let user = PFUser.currentUser()
+    
     @IBOutlet var profileImageView: AvatarImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let user = PFUser.currentUser()
+        
         firstNameLabel.text = user!["firstName"] as? String
         lastNameLabel.text = user!["lastName"] as? String
         
@@ -36,6 +38,11 @@ class MenuTableViewController: UITableViewController {
                 
             }
         }
+        
+        addGestureForProfileImage()
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+//        view.addGestureRecognizer(tap)
+
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -43,6 +50,72 @@ class MenuTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    func addGestureForProfileImage(){
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: "onTapImage:")
+        profileImageView.userInteractionEnabled = true
+        profileImageView.addGestureRecognizer(gestureRecognizer)
+    }
+//
+    //MARK: - Image Picker
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        //        let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+        let editedImage = info[UIImagePickerControllerEditedImage] as? UIImage
+        profileImageView.image = editedImage
+        if (profileImageView.image != nil) {
+            let imageData = UIImagePNGRepresentation(profileImageView.image!)
+            let imageFile = PFFile(name:"image.png", data:imageData!)
+            
+            user!["profilePicture"] = imageFile
+            user!.saveInBackground()
+        } else {
+            print("No picture")
+        }
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+//
+//    
+    func onTapImage(sender: UITapGestureRecognizer) {
+        //let imageView = sender.view as! UIImageView
+        print("TAPPED")
+        let alert = UIAlertController(title: "Post a photo", message: "Upload from library or take a picture", preferredStyle: .ActionSheet)
+        let actionOne = UIAlertAction(title: "Upload from library", style: .Default) { (action: UIAlertAction) -> Void in
+            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
+                let vc = UIImagePickerController()
+                vc.delegate = self
+                vc.allowsEditing = true
+                vc.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+                
+                self.presentViewController(vc, animated: true, completion: nil)
+            }
+            
+        }
+        
+        let actionTwo = UIAlertAction(title: "Take a picture", style: .Default) { (action: UIAlertAction) -> Void in
+            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+                
+                let vc = UIImagePickerController()
+                vc.delegate = self
+                vc.allowsEditing = true
+                vc.sourceType = UIImagePickerControllerSourceType.Camera
+                
+                self.presentViewController(vc, animated: true, completion: nil)
+                
+            }
+            print("Unavailable")
+        }
+        let actionCancel = UIAlertAction(title: "Cancel", style: .Cancel) { (action: UIAlertAction) -> Void in
+            
+        }
+        alert.addAction(actionOne)
+        alert.addAction(actionTwo)
+        alert.addAction(actionCancel)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
