@@ -86,16 +86,15 @@ class driveViewController: UIViewController {
         let formatter = NSDateFormatter()
         formatter.dateFormat = "MMM d, yyyy, HH:mm"
         let createdString = "\(dateView.date)"
-        print(createdString)
+//        print(createdString)
         let date = formatter.dateFromString(createdString)
-        print(date)
+//        print(date)
         
-        if(fronTxt.text?.isEmpty == nil) {
+        if(fronTxt.text == "" || toTxt.text == "" || priceTxt.text == "" || desTxt.text == "") {
             print("empty text field")
             SCLAlertView().showError("Empty textfield(s)", subTitle: "One of the textfields is empty") // Error
             
         } else {
-            
             Ride.postRide(fronTxt.text, arrivalPoint: toTxt.text, dateAndTime: dateView.date, price: priceTxt.text, description: desTxt.text, availability: true, seats: Int(seats.text!)) { (success: Bool, error: NSError?) -> Void in
                 if (success) {
                     print("success")

@@ -21,6 +21,7 @@ class Ride : NSObject {
         ride["price"] = price
         ride["description"] = description
         ride["availability"] = availability
+        print(PFUser.currentUser())
         ride["driver"] = PFUser.currentUser()
         ride["seats"] = seats
         
