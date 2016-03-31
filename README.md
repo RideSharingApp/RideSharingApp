@@ -22,6 +22,7 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 - [ ] messages
+- [ ] 3D Touch [Tarang]
 - [ ] payment
 - [ ] review
 - [ ] load cell after posting in drive without calling backend
