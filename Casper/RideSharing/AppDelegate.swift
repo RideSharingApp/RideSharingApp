@@ -29,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let vc = storyboard.instantiateViewControllerWithIdentifier("AlreadyLoggedIn")
             window?.rootViewController = vc
         }
+        
+        UIButton.appearance().tintColor = UIColor.setPrimaryRedColor()
         return true
     }
 

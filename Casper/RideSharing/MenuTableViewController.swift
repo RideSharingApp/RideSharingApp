@@ -40,10 +40,6 @@ class MenuTableViewController: UITableViewController, UIImagePickerControllerDel
         }
         
         addGestureForProfileImage()
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-//        view.addGestureRecognizer(tap)
-
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

@@ -11,6 +11,7 @@ import Parse
 import AVFoundation
 
 
+
 class SignInViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var phoneNumberTextField: UITextField!
@@ -30,8 +31,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         passwordTextField.delegate = self
 
         chooseKeyboardType()
-        
-        
+       
         // Do any additional setup after loading the view.
         
     }

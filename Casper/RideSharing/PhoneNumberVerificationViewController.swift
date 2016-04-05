@@ -149,7 +149,7 @@ class PhoneNumberVerificationViewController: UIViewController, UITextFieldDelega
     
     func step2() {
         phoneNumber = phoneNumbertextField.text!
-        phoneNumbertextField.text = ""
+       
         verificationCodeTextField.placeholder = "1234"
         
         sendVerificationButton.enabled = true
@@ -242,7 +242,7 @@ class PhoneNumberVerificationViewController: UIViewController, UITextFieldDelega
     }
         
     func showAlert(title: String, message: String) {
-        return UIAlertView(title: title, message: message, delegate: nil, cancelButtonTitle: NSLocalizedString("alertOK", comment: "OK")).show()
+        return UIAlertView(title: title, message: message, delegate: nil, cancelButtonTitle: NSLocalizedString("OK", comment: "OK")).show()
     }
     
     

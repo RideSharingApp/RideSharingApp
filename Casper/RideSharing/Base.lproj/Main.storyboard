@@ -20,9 +20,8 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7TA-4N-x1Y">
                                 <rect key="frame" x="43" y="417" width="288" height="30"/>
-                                <state key="normal" title="Sign Up With Phone">
-                                    <color key="titleColor" red="0.81176470590000005" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Sign Up With Phone"/>
                                 <connections>
                                     <segue destination="EOX-jw-NeL" kind="push" id="r1F-bW-gjL"/>
                                 </connections>
@@ -39,9 +38,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uKB-Yp-htH">
                                         <rect key="frame" x="248" y="4" width="42" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <state key="normal" title="Sign In">
-                                            <color key="titleColor" red="0.81176470590000005" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
+                                        <state key="normal" title="Sign In"/>
                                         <connections>
                                             <segue destination="7e7-j2-vaG" kind="presentation" id="j5B-mY-3YQ"/>
                                         </connections>
@@ -60,9 +57,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuB-Gc-BAv">
                                 <rect key="frame" x="43" y="371" width="288" height="30"/>
-                                <state key="normal" title="Log In With Facebook">
-                                    <color key="titleColor" red="0.81176470590000005" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <state key="normal" title="Log In With Facebook"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -102,9 +97,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFB-EH-C4a">
                                 <rect key="frame" x="43" y="258" width="288" height="30"/>
-                                <state key="normal" title="Send the verification code to this number">
-                                    <color key="titleColor" red="0.81176470590000005" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <state key="normal" title="Send the verification code to this number"/>
                                 <connections>
                                     <action selector="onSendVerification:" destination="EOX-jw-NeL" eventType="touchUpInside" id="6oF-eg-moF"/>
                                 </connections>
@@ -122,9 +115,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSr-wG-VCu">
                                 <rect key="frame" x="43" y="422" width="288" height="30"/>
-                                <state key="normal" title="Confirm">
-                                    <color key="titleColor" red="0.81176470590000005" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <state key="normal" title="Confirm"/>
                                 <connections>
                                     <action selector="onConfirm:" destination="EOX-jw-NeL" eventType="touchUpInside" id="YKb-8A-RRA"/>
                                 </connections>
@@ -199,9 +190,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkJ-kO-ewM">
                                 <rect key="frame" x="43" y="581" width="288" height="30"/>
-                                <state key="normal" title="Create a user">
-                                    <color key="titleColor" red="0.81176470590000005" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <state key="normal" title="Create a user"/>
                                 <connections>
                                     <action selector="onCreate:" destination="xMV-Wa-Eg9" eventType="touchUpInside" id="lgD-c5-ZNt"/>
                                 </connections>
@@ -269,9 +258,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jh3-P9-4R8">
                                 <rect key="frame" x="43" y="371" width="288" height="30"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="onLogin:" destination="7e7-j2-vaG" eventType="touchUpInside" id="xTG-Bw-Pjf"/>
                                 </connections>
@@ -288,9 +275,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsI-xP-n2b">
                                         <rect key="frame" x="245" y="2" width="48" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <state key="normal" title="Sign Up">
-                                            <color key="titleColor" red="0.81176470590000005" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
+                                        <state key="normal" title="Sign Up"/>
                                         <connections>
                                             <action selector="onSignUp:" destination="7e7-j2-vaG" eventType="touchUpInside" id="T7O-cx-BIB"/>
                                         </connections>
@@ -1012,13 +997,13 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FIRST NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sC-qI-bEP">
                                         <rect key="frame" x="104" y="18" width="271" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LAST NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jv0-Ks-PR1">
-                                        <rect key="frame" x="104" y="64" width="271" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <rect key="frame" x="104" y="47" width="271" height="24"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1120,9 +1105,8 @@
         <image name="user-icon-placeholder" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pBf-vz-pkR"/>
+        <segue reference="xI7-nE-2Xf"/>
         <segue reference="lA0-5y-XWZ"/>
         <segue reference="TCi-p7-BZi"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" red="0.81176470590000005" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
 </document>

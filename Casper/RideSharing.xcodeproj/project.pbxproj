@@ -29,6 +29,7 @@
 		75CA278E1C8F814C0029FEF4 /* PhoneNumberVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CA278D1C8F814C0029FEF4 /* PhoneNumberVerificationViewController.swift */; };
 		75CA27901C8F815A0029FEF4 /* CreateAUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CA278F1C8F815A0029FEF4 /* CreateAUserViewController.swift */; };
 		75CA27931C90D0580029FEF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75CA27911C90D0580029FEF4 /* Main.storyboard */; };
+		75D7DAF71CADBF9800269EDF /* CasperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D7DAF61CADBF9800269EDF /* CasperView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		75CA278D1C8F814C0029FEF4 /* PhoneNumberVerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberVerificationViewController.swift; sourceTree = "<group>"; };
 		75CA278F1C8F815A0029FEF4 /* CreateAUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAUserViewController.swift; sourceTree = "<group>"; };
 		75CA27921C90D0580029FEF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		75D7DAF61CADBF9800269EDF /* CasperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CasperView.swift; sourceTree = "<group>"; };
 		803140ED5EB20B5D0D631D2A /* Pods-RideSharing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RideSharing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RideSharing/Pods-RideSharing.debug.xcconfig"; sourceTree = "<group>"; };
 		C82A6281E5E1D8D73629179B /* Pods_RideSharing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RideSharing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE7CC3CDF048FB580167E957 /* Pods-RideSharing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RideSharing.release.xcconfig"; path = "Pods/Target Support Files/Pods-RideSharing/Pods-RideSharing.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				71A2E6431C8E2A0A0093FA08 /* RideTableViewCell.swift */,
+				75D7DAF61CADBF9800269EDF /* CasperView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				71A2E6481C8E33590093FA08 /* driveViewController.swift in Sources */,
 				71A2E6441C8E2A0A0093FA08 /* RideTableViewCell.swift in Sources */,
 				716FA70E1C863AA400ACF307 /* AppDelegate.swift in Sources */,
+				75D7DAF71CADBF9800269EDF /* CasperView.swift in Sources */,
 				71A2E6461C8E30320093FA08 /* AvatarImageView.swift in Sources */,
 				75CA278E1C8F814C0029FEF4 /* PhoneNumberVerificationViewController.swift in Sources */,
 				69567DA11C9F7F4A008A6844 /* Ride.swift in Sources */,

@@ -39,6 +39,8 @@ class CreateAUserViewController: UIViewController, UIImagePickerControllerDelega
         addGestureForProfileImage()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
+        
+        
     }
     
     func dismissKeyboard() {
