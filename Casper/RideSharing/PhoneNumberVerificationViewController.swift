@@ -20,6 +20,7 @@ class PhoneNumberVerificationViewController: UIViewController, UITextFieldDelega
     
     @IBOutlet weak var confirmButton: UIButton!
     
+    @IBOutlet weak var confirmView: UIView!
     
     var phoneNumber: String?
     var purePhoneNumber: String?
@@ -42,6 +43,8 @@ class PhoneNumberVerificationViewController: UIViewController, UITextFieldDelega
         }
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        confirmView.hidden = true
     }
     
     func dismissKeyboard() {
@@ -159,6 +162,7 @@ class PhoneNumberVerificationViewController: UIViewController, UITextFieldDelega
     
     @IBAction func onSendVerification(sender: AnyObject) {
         print("Verify clicked")
+        
         let preferredLanguage = NSBundle.mainBundle().preferredLocalizations[0]
         
         let textFieldText = phoneNumbertextField.text ?? ""
@@ -189,6 +193,7 @@ class PhoneNumberVerificationViewController: UIViewController, UITextFieldDelega
                 return self.step1()
             }
             print("No error")
+            self.verificationCodeTextField.becomeFirstResponder()
             return self.step2()
         }/*else {
         //            if verificationCodeTextField.text!.characters.count == 4, let code = Int(verificationCodeTextField.text!) {
@@ -197,6 +202,9 @@ class PhoneNumberVerificationViewController: UIViewController, UITextFieldDelega
         //
         //            showAlert("Code Entry", message: NSLocalizedString("warningCodeLength", comment: "You must enter the 4 digit code texted to your phone number."))
         }*/
+        UIView.animateWithDuration(0.8) {
+            self.confirmView.hidden = false
+        }
     }
     
     func doLogin(phoneNumber: String, code: Int) {

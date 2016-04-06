@@ -41,6 +41,9 @@ class driveViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        
         desTxt.layer.borderColor = UIColor.clearColor().CGColor
         desTxt.floatingPlaceholderEnabled = true
         desTxt.cornerRadius = 0

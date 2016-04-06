@@ -47,7 +47,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         // Do any additional setup after loading the view.
-        
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         loadData()
     }
     
@@ -84,7 +84,9 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @IBAction func callClicked(sender: AnyObject) {
-        
+        print("call clicked - \(phoneNumber)")
+        let telNum = phoneNumber
+        UIApplication.sharedApplication().openURL(NSURL(string: "tel://\(telNum!)")!)
     }
     
     func addGestureForProfileImage(){
@@ -151,7 +153,6 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         alert.addAction(actionCancel)
         self.presentViewController(alert, animated: true, completion: nil)
     }
-    
 
     /*
     // MARK: - Navigation

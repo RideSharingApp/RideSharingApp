@@ -24,6 +24,7 @@ class RideViewController: UIViewController, UITableViewDelegate, UITableViewData
     lazy var searchBar:UISearchBar = UISearchBar(frame: CGRectMake(0, 200, 200, 20))
     lazy var searchBar2:UISearchBar = UISearchBar(frame: CGRectMake(0, 200, 200, 20))
     
+    @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
     let activityIndicatorView = DGActivityIndicatorView(type: DGActivityIndicatorAnimationType.RotatingSquares, tintColor: UIColor(red: 78/255.0, green: 221/255.0, blue: 200/255.0, alpha: 1.0), size: 70.0)
@@ -89,8 +90,8 @@ class RideViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("RideCell", forIndexPath: indexPath) as! RideTableViewCell
         let info = self.info[indexPath.row]
-        cell.fromLabel.text = info["departurePoint"] as! String
-        cell.tolabel.text = info["arrivalPoint"] as! String
+        cell.fromLabel.text = "\(info["departurePoint"] as! String) - \(info["arrivalPoint"] as! String)"
+        //cell.tolabel.text = info["arrivalPoint"] as! String
         
         let olddate = info["dateAndTime"] as! NSDate
         let formatter = NSDateFormatter()
@@ -98,7 +99,7 @@ class RideViewController: UIViewController, UITableViewDelegate, UITableViewData
         let date = formatter.stringFromDate(olddate)
         cell.timeLabel.text = "\(date)"
         cell.priceLabel.text = (info["price"] as! String)+"$"
-        cell.seatLabel.text = String(info["seats"] as! Int)
+        cell.seatLabel.text = "\(String(info["seats"] as! Int)) Seat(s)"
         cell.timeLabel.sizeToFit()
         let query = PFUser.query()
         let driver = info["driver"] as? PFUser

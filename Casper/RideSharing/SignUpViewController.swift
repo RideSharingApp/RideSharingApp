@@ -25,7 +25,7 @@ class SignUpViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        let videoURL: NSURL = NSBundle.mainBundle().URLForResource("LoginVideo", withExtension: "mp4")!
+        let videoURL: NSURL = NSBundle.mainBundle().URLForResource("LoginVideo", withExtension: "mov")!
         
         player1 = AVPlayer(URL: videoURL)
         player1?.actionAtItemEnd = .None
@@ -46,6 +46,8 @@ class SignUpViewController: UIViewController {
                                                          selector: "loopVideo",
                                                          name: AVPlayerItemDidPlayToEndTimeNotification,
                                                          object: nil)
+    
+        navigationController?.navigationBar.hidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,6 +59,7 @@ class SignUpViewController: UIViewController {
         player1?.pause()
         playerLayer1?.removeFromSuperlayer()
         player1 = nil
+        navigationController?.navigationBar.hidden = false
     }
     
 

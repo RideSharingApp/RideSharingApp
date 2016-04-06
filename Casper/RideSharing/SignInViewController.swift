@@ -37,7 +37,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
-        let videoURL: NSURL = NSBundle.mainBundle().URLForResource("LoginVideo", withExtension: "mp4")!
+        let videoURL: NSURL = NSBundle.mainBundle().URLForResource("LoginVideo", withExtension: "mov")!
         
         player = AVPlayer(URL: videoURL)
         player?.actionAtItemEnd = .None
@@ -171,6 +171,9 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         player = nil
     }
     
+    @IBAction func onTap(sender: AnyObject) {
+        self.view.endEditing(true)
+    }
     
     @IBAction func onSignUp(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)

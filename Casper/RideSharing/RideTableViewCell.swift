@@ -13,11 +13,13 @@ class RideTableViewCell: UITableViewCell {
     @IBOutlet var priceLabel: UILabel!
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var seatLabel: UILabel!
-    @IBOutlet var tolabel: UILabel!
+    //@IBOutlet var tolabel: UILabel!
     @IBOutlet var fromLabel: UILabel!
     @IBOutlet var starLabel: UIImageView!
     @IBOutlet var profileImage: UIImageView!
+    
     override func awakeFromNib() {
+        
         super.awakeFromNib()
         // Initialization code
     }

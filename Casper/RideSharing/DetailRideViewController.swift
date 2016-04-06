@@ -27,6 +27,7 @@ class DetailRideViewController: UIViewController {
     @IBOutlet weak var carMakeAndModel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         print(ride)
         setRideDetails()
         let query = PFUser.query()
