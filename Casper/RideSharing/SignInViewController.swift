@@ -31,6 +31,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         passwordTextField.delegate = self
 
         chooseKeyboardType()
+        
+        passwordTextField.secureTextEntry = true
        
         // Do any additional setup after loading the view.
         

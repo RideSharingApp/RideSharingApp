@@ -12,19 +12,20 @@ import Parse
 
 class CreateAUserViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet weak var userNameAsPhoneNumberLabel: UILabel!
     
-    @IBOutlet weak var usernameTextField: UITextField!
+    //@IBOutlet weak var usernameTextField: UITextField!
     
     @IBOutlet weak var firstnameTextField: UITextField!
     @IBOutlet weak var lastnameTextField: UITextField!
-    @IBOutlet weak var ageTextField: UITextField!
-    @IBOutlet weak var genderTextField: UITextField!
+
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordAgainTextField: UITextField!
     
-    @IBOutlet weak var carMakeAndModel: UITextField!
+
     @IBOutlet weak var profilePictureImageView: UIImageView!
     @IBOutlet weak var createUserButton: UIButton!
+    @IBOutlet weak var errorDescriptionLabel: UILabel!
     
     let newUser = PFUser()
     var phoneNumberPassed: String?
@@ -34,12 +35,15 @@ class CreateAUserViewController: UIViewController, UIImagePickerControllerDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        usernameTextField.text = phoneNumberPassed
+        userNameAsPhoneNumberLabel.text = phoneNumberPassed
         print(phoneNumberPassed)
         addGestureForProfileImage()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
+        errorDescriptionLabel.hidden = true
         
+        passwordTextField.secureTextEntry = true
+        passwordAgainTextField.secureTextEntry = true
         
     }
     
@@ -66,18 +70,54 @@ class CreateAUserViewController: UIViewController, UIImagePickerControllerDelega
     }
 
     @IBAction func onCreate(sender: AnyObject) {
-        
-        
-        newUser.username = usernameTextField.text
+        let anim = CAKeyframeAnimation( keyPath:"transform" )
+        anim.values = [
+            NSValue( CATransform3D:CATransform3DMakeTranslation(-5, 0, 0 ) ),
+            NSValue( CATransform3D:CATransform3DMakeTranslation( 5, 0, 0 ) )
+        ]
+        anim.autoreverses = true
+        anim.repeatCount = 2
+        anim.duration = 7/100
+
+        newUser.username = userNameAsPhoneNumberLabel.text
         newUser["firstName"] = firstnameTextField.text
         newUser["lastName"] = lastnameTextField.text
-        newUser["age"] = ageTextField.text
-        newUser["gender"] = genderTextField.text
-        newUser["CarMakeAndModel"] = carMakeAndModel.text
+
         newUser["profilePicture"] = getPFFileFromImage(self.profilePictureImageView.image)
         if passwordTextField.text == passwordAgainTextField.text {
-            newUser.password = passwordTextField.text
+            if (passwordAgainTextField.text?.characters.count) > 5 {
+                let digits = NSCharacterSet.decimalDigitCharacterSet()
+                let passw = passwordAgainTextField.text
+                if (passw!.rangeOfCharacterFromSet(digits) != nil) {
+                    
+                    self.newUser.password = self.passwordTextField.text
+                    
+                } else {
+                    errorDescriptionLabel.hidden = false
+                    errorDescriptionLabel.text = "Your password doesn't contain a digit, please try again"
+                    passwordTextField.textColor = UIColor.setPrimaryRedColor()
+                    passwordAgainTextField.textColor = UIColor.setPrimaryRedColor()
+                    passwordTextField.layer.addAnimation( anim, forKey:nil)
+                    passwordAgainTextField.layer.addAnimation( anim, forKey:nil)
+                    
+                    print("Passsword doesn't contain a digit")
+                }
+            } else {
+                errorDescriptionLabel.hidden = false
+                errorDescriptionLabel.text = "Your password is less than 6 characters, please try again"
+                passwordTextField.textColor = UIColor.setPrimaryRedColor()
+                passwordAgainTextField.textColor = UIColor.setPrimaryRedColor()
+                passwordTextField.layer.addAnimation( anim, forKey:nil)
+                passwordAgainTextField.layer.addAnimation( anim, forKey:nil)
+                print("Password is less than 6 characters")
+            }
         } else {
+            errorDescriptionLabel.hidden = false
+            errorDescriptionLabel.text = "Your passwords are not the same, please try again"
+            passwordTextField.textColor = UIColor.setPrimaryRedColor()
+            passwordAgainTextField.textColor = UIColor.setPrimaryRedColor()
+            passwordTextField.layer.addAnimation( anim, forKey:nil)
+            passwordAgainTextField.layer.addAnimation( anim, forKey:nil)
             print("Passwords don't match")
         }
         
@@ -85,11 +125,17 @@ class CreateAUserViewController: UIViewController, UIImagePickerControllerDelega
             if let error = error {
                 print(error.localizedDescription)
                 if (error.code == 202) {
+                    self.errorDescriptionLabel.hidden = false
+                    self.errorDescriptionLabel.text = "This phone number is already used by another user, please try login"
                     print("This phone number is already used by another user")
                 }
             } else {
+                self.errorDescriptionLabel.hidden = true
+                self.passwordTextField.textColor = UIColor.blackColor()
+                self.passwordAgainTextField.textColor = UIColor.blackColor()
+
                 print("Created a new user")
-                self.performSegueWithIdentifier("toMainMenu", sender: nil)
+                self.performSegueWithIdentifier("toMoreInfo", sender: nil)
             }
         }
     }

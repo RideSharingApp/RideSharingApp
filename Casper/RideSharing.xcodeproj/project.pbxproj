@@ -25,6 +25,7 @@
 		71A2E6461C8E30320093FA08 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2E6451C8E30320093FA08 /* AvatarImageView.swift */; };
 		71A2E6481C8E33590093FA08 /* driveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2E6471C8E33590093FA08 /* driveViewController.swift */; };
 		71A2E64A1C8E38590093FA08 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2E6491C8E38590093FA08 /* ProfileViewController.swift */; };
+		755B67B91CB6F354003CFBE6 /* MoreUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755B67B81CB6F354003CFBE6 /* MoreUserInfoViewController.swift */; };
 		75CA278A1C8F81290029FEF4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CA27891C8F81290029FEF4 /* SignUpViewController.swift */; };
 		75CA278C1C8F81360029FEF4 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CA278B1C8F81360029FEF4 /* SignInViewController.swift */; };
 		75CA278E1C8F814C0029FEF4 /* PhoneNumberVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CA278D1C8F814C0029FEF4 /* PhoneNumberVerificationViewController.swift */; };
@@ -55,6 +56,7 @@
 		71A2E6451C8E30320093FA08 /* AvatarImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
 		71A2E6471C8E33590093FA08 /* driveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = driveViewController.swift; sourceTree = "<group>"; };
 		71A2E6491C8E38590093FA08 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		755B67B81CB6F354003CFBE6 /* MoreUserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreUserInfoViewController.swift; sourceTree = "<group>"; };
 		75CA27891C8F81290029FEF4 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		75CA278B1C8F81360029FEF4 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		75CA278D1C8F814C0029FEF4 /* PhoneNumberVerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberVerificationViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				75CA278B1C8F81360029FEF4 /* SignInViewController.swift */,
 				75CA278D1C8F814C0029FEF4 /* PhoneNumberVerificationViewController.swift */,
 				75CA278F1C8F815A0029FEF4 /* CreateAUserViewController.swift */,
+				755B67B81CB6F354003CFBE6 /* MoreUserInfoViewController.swift */,
 			);
 			name = "SignInSignUp View Controllers";
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				69F0F1A51C921E4B005A0411 /* CustomSearchController.swift in Sources */,
 				71A2E6481C8E33590093FA08 /* driveViewController.swift in Sources */,
 				71A2E6441C8E2A0A0093FA08 /* RideTableViewCell.swift in Sources */,
+				755B67B91CB6F354003CFBE6 /* MoreUserInfoViewController.swift in Sources */,
 				716FA70E1C863AA400ACF307 /* AppDelegate.swift in Sources */,
 				75D7DAF71CADBF9800269EDF /* CasperView.swift in Sources */,
 				71A2E6461C8E30320093FA08 /* AvatarImageView.swift in Sources */,
