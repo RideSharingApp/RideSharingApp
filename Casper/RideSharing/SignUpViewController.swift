@@ -9,6 +9,10 @@
 import UIKit
 import Parse
 import AVFoundation
+import ParseFacebookUtilsV4
+import FBSDKCoreKit
+import FBSDKLoginKit
+import FBSDKShareKit
 
 class SignUpViewController: UIViewController {
 
@@ -22,6 +26,41 @@ class SignUpViewController: UIViewController {
     func loopVideo() {
         player1?.seekToTime(kCMTimeZero)
         player1?.play()
+    }
+    
+    @IBOutlet var FacebookButton: UIButton!
+    @IBAction func onTapFacebook(sender: AnyObject) {
+        
+        PFFacebookUtils.logInInBackgroundWithReadPermissions(["public_profile","email"]) {
+            (user: PFUser?, error: NSError?) -> Void in
+            if error == nil {
+            if let user = user {
+                print("User token: \(FBSDKAccessToken.currentAccessToken().tokenString)")
+                print("User ID: \(FBSDKAccessToken.currentAccessToken().userID)")
+                user.username = FBSDKAccessToken.currentAccessToken().userID
+                self.fetchProfile()
+                self.performSegueWithIdentifier("FacebookToInfo", sender: self)
+            } else {
+                print("Uh oh. The user cancelled the Facebook login.")
+            }
+            }else{
+                print("\(error)")
+            }
+        }
+
+        
+    }
+    
+    func fetchProfile(){
+        print("fetch:")
+        let parameters1 = ["fields:":"email,first_name,last_name,picture"]
+        FBSDKGraphRequest(graphPath: "me", parameters:parameters1 ).startWithCompletionHandler { (connection, result, error) -> Void in
+            if(error != nil){
+                print("\(error)")
+            }else{
+                print(result)
+            }
+        }
     }
     
     override func viewWillAppear(animated: Bool) {

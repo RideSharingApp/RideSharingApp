@@ -88,9 +88,13 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-RideSharing/DGActivityIndicatorView.framework"
   install_framework "Pods-RideSharing/DGElasticPullToRefresh.framework"
   install_framework "Pods-RideSharing/ElasticTransition.framework"
+  install_framework "Pods-RideSharing/FBSDKCoreKit.framework"
+  install_framework "Pods-RideSharing/FBSDKLoginKit.framework"
+  install_framework "Pods-RideSharing/FBSDKShareKit.framework"
   install_framework "Pods-RideSharing/MaterialKit.framework"
   install_framework "Pods-RideSharing/MotionAnimation.framework"
   install_framework "Pods-RideSharing/Parse.framework"
+  install_framework "Pods-RideSharing/ParseFacebookUtilsV4.framework"
   install_framework "Pods-RideSharing/SCLAlertView.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -98,8 +102,12 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-RideSharing/DGActivityIndicatorView.framework"
   install_framework "Pods-RideSharing/DGElasticPullToRefresh.framework"
   install_framework "Pods-RideSharing/ElasticTransition.framework"
+  install_framework "Pods-RideSharing/FBSDKCoreKit.framework"
+  install_framework "Pods-RideSharing/FBSDKLoginKit.framework"
+  install_framework "Pods-RideSharing/FBSDKShareKit.framework"
   install_framework "Pods-RideSharing/MaterialKit.framework"
   install_framework "Pods-RideSharing/MotionAnimation.framework"
   install_framework "Pods-RideSharing/Parse.framework"
+  install_framework "Pods-RideSharing/ParseFacebookUtilsV4.framework"
   install_framework "Pods-RideSharing/SCLAlertView.framework"
 fi

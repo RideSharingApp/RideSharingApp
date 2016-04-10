@@ -1,22 +1,44 @@
 PODS:
+  - Bolts (1.6.0):
+    - Bolts/AppLinks (= 1.6.0)
+    - Bolts/Tasks (= 1.6.0)
+  - Bolts/AppLinks (1.6.0):
+    - Bolts/Tasks
   - Bolts/Tasks (1.6.0)
   - DGActivityIndicatorView (2.0)
   - DGElasticPullToRefresh (1.0.3)
   - ElasticTransition (2.1.0):
     - MotionAnimation (~> 0.0.5)
+  - FBSDKCoreKit (4.10.1):
+    - Bolts (~> 1.5)
+  - FBSDKLoginKit (4.10.1):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.10.1):
+    - FBSDKCoreKit
   - MaterialKit (0.4)
   - MotionAnimation (0.0.5)
   - Parse (1.12.0):
     - Bolts/Tasks (~> 1.5)
+  - ParseFacebookUtilsV4 (1.11.1):
+    - Bolts/Tasks (>= 1.6)
+    - FBSDKCoreKit (~> 4.10)
+    - FBSDKLoginKit (~> 4.10)
+    - FBSDKTVOSKit (~> 4.10)
+    - Parse (~> 1.12)
   - SCLAlertView (0.5.1)
   - TwilioSDK (1.2.7)
 
 DEPENDENCIES:
+  - Bolts
   - DGActivityIndicatorView
   - DGElasticPullToRefresh
   - ElasticTransition
+  - FBSDKCoreKit
+  - FBSDKLoginKit
+  - FBSDKShareKit
   - MaterialKit (~> 0.4)
   - Parse
+  - ParseFacebookUtilsV4
   - SCLAlertView
   - TwilioSDK (~> 1.2)
 
@@ -25,9 +47,13 @@ SPEC CHECKSUMS:
   DGActivityIndicatorView: 52875b025a6ccf6a431a905285c12e2bb95eb559
   DGElasticPullToRefresh: 040f39ae69840b3261d163fe6735c5901bf851e9
   ElasticTransition: 7c04b2ad4323fc4b18475c60f061cf4be7399f00
+  FBSDKCoreKit: d2aaed5e9ab7d8d6301c533376a1fbff1cf3deb5
+  FBSDKLoginKit: 699ff169080e3072de4b9b0faca90bf23dc36deb
+  FBSDKShareKit: 2fd887cce0056bdda91f99b2021d724a4fed8e88
   MaterialKit: 2e5267bcf410b82793f2b92d2111f8ae4ed2c3f2
   MotionAnimation: d9d4060bf4f494dd61bf868b8969a31b1b0b6f2a
   Parse: de2c52a9a1421b91ae7594ab8ce191afd184f19b
+  ParseFacebookUtilsV4: 2f30c2b7021c8005d3042781da7ef87d06589421
   SCLAlertView: 3ac39a863d3e10fc165662b1228b03402297aea9
   TwilioSDK: d3982acf6880ddf3ce57c4444e021a71c5f35653
 

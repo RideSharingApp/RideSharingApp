@@ -11,5 +11,13 @@ target 'RideSharing' do
     pod 'TwilioSDK', '~>1.2'
     pod 'MaterialKit', '~> 0.4'
     pod 'SCLAlertView'
+    
+    pod 'Bolts'
+    pod 'FBSDKCoreKit'
+    pod 'FBSDKShareKit'
+    pod 'FBSDKLoginKit'
+    
+    pod 'ParseFacebookUtilsV4'
+
 end
 
