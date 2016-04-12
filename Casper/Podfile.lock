@@ -1,10 +1,10 @@
 PODS:
-  - Bolts (1.6.0):
-    - Bolts/AppLinks (= 1.6.0)
-    - Bolts/Tasks (= 1.6.0)
-  - Bolts/AppLinks (1.6.0):
+  - Bolts (1.7.0):
+    - Bolts/AppLinks (= 1.7.0)
+    - Bolts/Tasks (= 1.7.0)
+  - Bolts/AppLinks (1.7.0):
     - Bolts/Tasks
-  - Bolts/Tasks (1.6.0)
+  - Bolts/Tasks (1.7.0)
   - DGActivityIndicatorView (2.0)
   - DGElasticPullToRefresh (1.0.3)
   - ElasticTransition (2.1.0):
@@ -29,7 +29,6 @@ PODS:
   - TwilioSDK (1.2.7)
 
 DEPENDENCIES:
-  - Bolts
   - DGActivityIndicatorView
   - DGElasticPullToRefresh
   - ElasticTransition
@@ -43,7 +42,7 @@ DEPENDENCIES:
   - TwilioSDK (~> 1.2)
 
 SPEC CHECKSUMS:
-  Bolts: f52a250053bb517ca874523c3913776359ab3def
+  Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
   DGActivityIndicatorView: 52875b025a6ccf6a431a905285c12e2bb95eb559
   DGElasticPullToRefresh: 040f39ae69840b3261d163fe6735c5901bf851e9
   ElasticTransition: 7c04b2ad4323fc4b18475c60f061cf4be7399f00

@@ -12,7 +12,7 @@ target 'RideSharing' do
     pod 'MaterialKit', '~> 0.4'
     pod 'SCLAlertView'
     
-    pod 'Bolts'
+    #pod 'Bolts'
     pod 'FBSDKCoreKit'
     pod 'FBSDKShareKit'
     pod 'FBSDKLoginKit'
